@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GlassCard } from '../ui/GlassCard';
 import { Button } from '../ui/Button';
-import { CheckCircle, Loader2, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Loader2, Mail, MapPin, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Contact: React.FC = () => {
@@ -14,16 +14,47 @@ export const Contact: React.FC = () => {
     message: ''
   });
 
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
+    setErrorMessage('');
     
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-    }, 1500);
+    // -------------------------------------------------------------------------
+    // IMPORTANT : Remplacez l'URL ci-dessous par votre propre endpoint Formspree
+    // Créer un formulaire gratuit sur https://formspree.io/
+    // Exemple : "https://formspree.io/f/xkqnwvkj"
+    // -------------------------------------------------------------------------
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/VOTRE_ID_FORMSPREE";
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        // Reset form data if needed here, though we show a success screen instead
+      } else {
+        const data = await response.json();
+        setStatus('error');
+        if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
+          setErrorMessage(data.errors.map((error: any) => error.message).join(", "));
+        } else {
+          setErrorMessage("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+        }
+      }
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage("Impossible de contacter le serveur. Vérifiez votre connexion.");
+    }
   };
 
   if (status === 'success') {
@@ -43,7 +74,17 @@ export const Contact: React.FC = () => {
             <p className="text-white/60 max-w-2xl mx-auto mb-8 text-sm md:text-base">
               L'équipe Tomorrow Theory a bien reçu vos informations. Nous reviendrons vers vous sous 48h ouvrées pour planifier votre échange technique.
             </p>
-            <Button variant="secondary" onClick={() => setStatus('idle')}>
+            <Button variant="secondary" onClick={() => {
+              setStatus('idle');
+              setFormState({
+                name: '',
+                email: '',
+                organization: '',
+                role: '',
+                subject: '',
+                message: ''
+              });
+            }}>
               Envoyer une autre demande
             </Button>
           </GlassCard>
@@ -101,6 +142,7 @@ export const Contact: React.FC = () => {
                   <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Nom complet</label>
                   <input 
                     type="text" 
+                    name="name"
                     required
                     disabled={status === 'submitting'}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
@@ -112,6 +154,7 @@ export const Contact: React.FC = () => {
                   <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Email pro</label>
                   <input 
                     type="email" 
+                    name="email"
                     required
                     disabled={status === 'submitting'}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
@@ -126,6 +169,7 @@ export const Contact: React.FC = () => {
                   <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Organisation</label>
                   <input 
                     type="text" 
+                    name="organization"
                     required
                     disabled={status === 'submitting'}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
@@ -137,6 +181,7 @@ export const Contact: React.FC = () => {
                   <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Fonction</label>
                   <input 
                     type="text" 
+                    name="role"
                     required
                     disabled={status === 'submitting'}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
@@ -150,6 +195,7 @@ export const Contact: React.FC = () => {
                   <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Sujet / Enjeu</label>
                   <input 
                     type="text" 
+                    name="subject"
                     disabled={status === 'submitting'}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
                     value={formState.subject}
@@ -160,6 +206,7 @@ export const Contact: React.FC = () => {
               <div className="space-y-2">
                 <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Message</label>
                 <textarea 
+                  name="message"
                   rows={4}
                   disabled={status === 'submitting'}
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
@@ -167,6 +214,14 @@ export const Contact: React.FC = () => {
                   onChange={e => setFormState({...formState, message: e.target.value})}
                 />
               </div>
+
+              {/* Error Message Display */}
+              {status === 'error' && (
+                <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center gap-3 text-red-200 text-sm">
+                  <AlertCircle size={16} className="shrink-0" />
+                  <p>{errorMessage}</p>
+                </div>
+              )}
 
               <div className="pt-2">
                 <Button type="submit" className="w-full" disabled={status === 'submitting'}>
