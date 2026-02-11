@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlassCard } from '../ui/GlassCard';
-import { Calendar, Users, Rocket, CheckCircle } from 'lucide-react';
+import { Calendar, Users, Rocket, CheckCircle, MessageCircle } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 export const V2Offer: React.FC = () => {
@@ -30,10 +30,11 @@ export const V2Offer: React.FC = () => {
                     <li className="flex items-start gap-3"><CheckCircle size={18} className="text-accent mt-1 shrink-0" /> Une rupture avec les automatismes de conception pédagogique.</li>
                     <li className="flex items-start gap-3"><CheckCircle size={18} className="text-accent mt-1 shrink-0" /> Une rationalisation des investissements basée sur la preuve.</li>
                     <li className="flex items-start gap-3"><CheckCircle size={18} className="text-accent mt-1 shrink-0" /> Une pertinence accrue des dispositifs perçue par le terrain.</li>
+                    <li className="flex items-start gap-3"><CheckCircle size={18} className="text-accent mt-1 shrink-0" /> Un partage de bonnes pratiques avec des experts d'autres organisations partenaires.</li>
                 </ul>
             </div>
             
-            <div className="space-y-8">
+            <div className="space-y-8 mb-10">
               <div className="relative pl-8 border-l border-white/10">
                 <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-accent/50"></div>
                 <h4 className="text-white font-medium mb-1">Cadrage & Alignement</h4>
@@ -54,6 +55,22 @@ export const V2Offer: React.FC = () => {
                 <h4 className="text-white font-medium mb-1">Bilan & Projection</h4>
                 <p className="text-sm text-white/50">Consolidation des résultats et livraison des actifs finaux.</p>
               </div>
+            </div>
+
+            {/* Community Feature Block */}
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 relative overflow-hidden group hover:border-accent/20 transition-colors">
+                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <Users size={80} className="text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-3">
+                    <div className="p-2 bg-accent/10 rounded-lg text-accent">
+                        <MessageCircle size={20} />
+                    </div>
+                    Projet Communautaire
+                </h3>
+                <p className="text-white/70 text-sm leading-relaxed relative z-10">
+                    Le consortium dépasse la relation client-fournisseur. Nous animons une communauté de partenaires L&D en mode <strong className="text-white">innovation ouverte</strong> : partage des meilleures pratiques et apports professionnalisants sur les travaux de Tomorrow Theory.
+                </p>
             </div>
           </div>
 

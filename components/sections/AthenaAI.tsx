@@ -35,7 +35,7 @@ export const AthenaAI: React.FC = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Module Skills */}
-            <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+            <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors flex flex-col h-full">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                     <Microscope size={24} />
                 </div>
@@ -43,13 +43,13 @@ export const AthenaAI: React.FC = () => {
                 <p className="text-white/60 text-sm mb-6 leading-relaxed">
                     Déconstruction analytique de toute compétence en <strong className="text-white/80">60 facettes</strong>, chacune évaluée sur <strong className="text-white/80">4 niveaux distincts</strong>, pour identifier les prérequis cognitifs et comportementaux.
                 </p>
-                <div className="pt-6 border-t border-white/5">
+                <div className="pt-6 border-t border-white/5 mt-auto">
                     <span className="text-xs text-white/30 uppercase tracking-widest">Livrable : Cartographie des facettes</span>
                 </div>
             </div>
 
             {/* Module Profile */}
-             <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+             <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors flex flex-col h-full">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                     <Sliders size={24} />
                 </div>
@@ -57,13 +57,13 @@ export const AthenaAI: React.FC = () => {
                 <p className="text-white/60 text-sm mb-6 leading-relaxed">
                     Caractérisation multidimensionnelle du contexte d'apprentissage (17 facteurs) pour assurer l'alignement entre le dispositif pédagogique et la réalité opérationnelle des apprenants.
                 </p>
-                <div className="pt-6 border-t border-white/5">
+                <div className="pt-6 border-t border-white/5 mt-auto">
                     <span className="text-xs text-white/30 uppercase tracking-widest">Livrable : Paramétrage contextuel</span>
                 </div>
             </div>
 
             {/* Module Learn */}
-             <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+             <div className="group p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors flex flex-col h-full">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                     <Library size={24} />
                 </div>
@@ -71,7 +71,7 @@ export const AthenaAI: React.FC = () => {
                 <p className="text-white/60 text-sm mb-6 leading-relaxed">
                     Assemblage raisonné de modalités pédagogiques, sélectionnées parmi 220+ formats indexés, justifié par l'adéquation entre objectifs cognitifs et leviers d'apprentissage.
                 </p>
-                <div className="pt-6 border-t border-white/5">
+                <div className="pt-6 border-t border-white/5 mt-auto">
                     <span className="text-xs text-white/30 uppercase tracking-widest">Livrable : Scénario d'architecture</span>
                 </div>
             </div>
