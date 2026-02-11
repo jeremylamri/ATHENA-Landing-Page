@@ -1,0 +1,212 @@
+{
+    "hero": {
+        "badge": "ACTION-RESEARCH PROGRAM",
+        "title": "Professionalize skills engineering with ATHENA",
+        "subtitle_strong": "The initiative redefining training engineering standards for the coming decade.",
+        "subtitle": "ATHENA equips L&D departments with an unprecedentedly powerful tool to redefine training standards and augment instructional design through science and technology.",
+        "cta_talk": "Request a meeting",
+        "cta_download": "Download One-Pager"
+    },
+    "nav": {
+        "problem": "Problem",
+        "model": "Model",
+        "ai": "AI",
+        "capabilities": "Capabilities",
+        "social_proof": "Social Proof",
+        "offer": "V2 Offer",
+        "ip": "IP & Data",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "legal": "Legal Notice",
+        "studio": "Discover Tomorrow Theory, the HR innovation studio",
+        "contact": "Contact"
+    },
+    "ai": {
+        "badge": "Artificial Intelligence",
+        "title": "Augmented Engineering.",
+        "description": "ATHENA AI operationalizes the theoretical model without reducing its richness. AI acts as a reasoning amplifier to structure the pedagogical architecture, without ever masking the underlying complexity.",
+        "architecture": {
+            "title": "Composite Cognitive Architecture",
+            "desc": "ATHENA does not rely on a single model, but on an orchestration of several specialized LLMs. This chain of agents collaborates sequentially to dissect the need, verify pedagogical coherence, and secure deliverables."
+        },
+        "modules": {
+            "skills": {
+                "title": "ATHENA Skills",
+                "desc": "Analytical deconstruction of any competence into <strong class=\"text-white/80\">60 facets</strong>, each evaluated on <strong class=\"text-white/80\">4 distinct levels</strong>, to identify cognitive and behavioral prerequisites.",
+                "deliverable": "Deliverable: Facet Mapping"
+            },
+            "profile": {
+                "title": "ATHENA Profile",
+                "desc": "Multidimensional characterization of the learning context (17 factors) to ensure alignment between the pedagogical device and the operational reality of learners.",
+                "deliverable": "Deliverable: Contextual Setup"
+            },
+            "learn": {
+                "title": "ATHENA Learn",
+                "desc": "Reasoned assembly of pedagogical modalities, selected from 220+ indexed formats, justified by the adequacy between cognitive objectives and learning levers.",
+                "deliverable": "Deliverable: Architecture Scenario"
+            }
+        }
+    },
+    "capabilities": {
+        "badge": "Strategic Capabilities",
+        "title": "New capabilities for the L&D department.",
+        "description": "Beyond tooling, ATHENA modifies training governance. The system establishes a decision-making practice based on probative data and choice traceability.",
+        "cards": {
+            "objectivation": {
+                "title": "Objectivation of pedagogical choices",
+                "desc": "Substitute intuition with traceable technical argumentation. ATHENA links each selected modality to an explicit pedagogical intention, correlated with the contributing facets of the competence."
+            },
+            "modeling": {
+                "title": "Comparative modeling",
+                "desc": "Evaluate ex-ante different training architectures. The system allows comparing several pedagogical investment scenarios according to resource and time constraints."
+            },
+            "transparency": {
+                "title": "Decision transparency",
+                "desc": "Explicate necessary tradeoffs. By making arbitrations visible (depth vs coverage), ATHENA qualifies the dialogue between L&D and business sponsors."
+            },
+            "tactics": {
+                "title": "Tactical diversification",
+                "desc": "Break with design automatisms. Indexing over 220 modalities allows mobilizing the entire pedagogical spectrum to meet the complexity of needs."
+            },
+            "capitalization": {
+                "title": "Constitution of technical assets",
+                "desc": "Transform each project into an asset for the organization. Analyses and architectures are capitalized in a structured knowledge base, promoting continuous improvement of practices."
+            }
+        },
+        "conclusion": "Towards a more explicit, cumulative, and strategic training engineering."
+    },
+    "social_proof": {
+        "badge": "Validation & Proof",
+        "title": "A scientific achievement.",
+        "desc_1": "ATHENA is not an isolated experiment, but the breaking point of a research lineage. The system crystallizes <strong class=\"text-white/80\">over 10 years of continuous R&D</strong> on human performance modeling.",
+        "desc_2": "To demonstrate the application in the ATHENA project field, Tomorrow Theory formed a consortium in early 2025, alongside <strong class=\"text-white/80\">Decathlon</strong>, <strong class=\"text-white/80\">Crédit Mutuel Alliance Fédérale</strong>, and <strong class=\"text-white/80\">Bouygues</strong>. This consortium greatly accelerated the work related to ATHENA.",
+        "recognition": "ATHENA already benefits from academic recognition, with 3 research articles published in prestigious international academic journals. These articles total nearly 50,000 views in the research world, demonstrating strong interest in the ATHENA approach.",
+        "publications": {
+            "read_article": "Read full article",
+            "status_published": "Published"
+        }
+    },
+    "v2": {
+        "badge": "The Program",
+        "title": "ATHENA V2 Program.",
+        "intro": "Starting April 2026, phase 2 of the program will gather a restricted consortium of partners. The objective is to consolidate methodological standards and optimize design aid algorithms.",
+        "benefits": {
+            "title": "For the partner organization, integration into the program provides:",
+            "list": {
+                "grid": "A high-definition reading grid of strategic skills.",
+                "break": "A break with pedagogical design automatisms.",
+                "rationalization": "Evidence-based investment rationalization.",
+                "relevance": "Increased device relevance perceived by the field.",
+                "sharing": "Best practice sharing with experts from other partner organizations."
+            }
+        },
+        "phases": {
+            "framing": {
+                "title": "Framing & Alignment",
+                "desc": "Definition of experimentation perimeters and task force constitution."
+            },
+            "modeling": {
+                "title": "Modeling & Test",
+                "desc": "Model testing on real and critical use cases."
+            },
+            "anchoring": {
+                "title": "Methodological Anchoring",
+                "desc": "Skills transfer and tool ownership by designers."
+            },
+            "projection": {
+                "title": "Assessment & Projection",
+                "desc": "Consolidation of results and delivery of final assets."
+            }
+        },
+        "community": {
+            "title": "Community Project",
+            "desc": "The consortium goes beyond the client-supplier relationship. We animate a community of L&D partners in <strong class=\"text-white\">open innovation</strong> mode: sharing best practices and professionalizing contributions to Tomorrow Theory's work."
+        },
+        "card": {
+            "title": "Membership Terms",
+            "start_label": "Start",
+            "start_value": "April 2026",
+            "duration_label": "Cycle Duration",
+            "duration_value": "12 months",
+            "consortium_label": "Consortium",
+            "consortium_value": "6 partners max.",
+            "contribution_label": "Financial Contribution",
+            "cta": "Apply for the program",
+            "governance_label": "Required Governance:",
+            "governance_value": "Executive Sponsor + Project Manager + Subject Matter Experts."
+        }
+    },
+    "ip": {
+        "badge": "Intellectual Property",
+        "title": "Technological Independence.",
+        "description": "The program's philosophy is to strengthen organizational autonomy, not to create additional software dependency.",
+        "cards": {
+            "transfer": {
+                "title": "Full Transfer",
+                "desc": "Each partner benefits from a complete transfer of assets produced during V2 (models, algorithms, source codes), ensuring value chain mastery."
+            },
+            "free_use": {
+                "title": "Free Exploitation",
+                "desc": "Unlimited internal right of use and modification, guaranteeing total absence of technological \"lock-in\" or future royalties."
+            },
+            "data_privacy": {
+                "title": "Data Partitioning",
+                "desc": "Strict confidentiality of data and specific use cases for each organization. No pooling of sensitive data within the consortium."
+            }
+        },
+        "disclaimer": "Tomorrow Theory retains original intellectual property and right of subsequent development. Partners remain free to perpetuate or not the use of transferred assets at the end of the program."
+    },
+    "about": {
+        "badge": "About Tomorrow Theory",
+        "title": "Prepare for the future of work.",
+        "desc_1": "Our job is to support you in anticipating and integrating the major challenges of the future of work and HR, to allow you to better attract, develop, and retain your talents.",
+        "desc_2": "Our approaches combine mastery of sciences, technologies, and influence techniques to effectively support all stages of your transformation.",
+        "desc_3": "The ATHENA project embodies this vision: sober, transparent technology serving precision pedagogy.",
+        "cards": {
+            "sovereignty": {
+                "title": "Sovereignty & Independence",
+                "desc": "Actor with 100% French capital, Tomorrow Theory fully plays the game of a sovereign Europe."
+            },
+            "leadership": {
+                "title": "Ecosystem Leadership",
+                "desc": "Founded by future of work enthusiasts, historical co-founders of <strong class=\"text-white/90\">Lab RH</strong> and <strong class=\"text-white/90\">Hub France IA</strong>."
+            },
+            "innovation": {
+                "title": "Disruptive Innovation",
+                "desc": "A radical approach prioritizing action-research and scientific proof over promise marketing."
+            }
+        }
+    },
+    "contact": {
+        "badge": "Contact",
+        "title": "Evaluate the opportunity.",
+        "description": "Share your strategic priorities. We will organize a technical dialogue to qualify the relevance of integrating the ATHENA consortium regarding your L&D challenges.",
+        "info": {
+            "email": "Direct Email",
+            "hq": "Headquarters"
+        },
+        "form": {
+            "name": "Full Name",
+            "email": "Pro Email",
+            "org": "Organization",
+            "role": "Role",
+            "subject": "Subject / Issue",
+            "message": "Message",
+            "submit": "Send Request",
+            "submitting": "Sending...",
+            "disclaimer": "By submitting this form, you accept being contacted by the Tomorrow Theory team."
+        },
+        "success": {
+            "title": "Request sent successfully.",
+            "desc": "The Tomorrow Theory team has received your information. We will get back to you within 48 business hours to schedule your technical exchange.",
+            "reset": "Send another request"
+        },
+        "error": {
+            "generic": "An error occurred during sending. Please try again.",
+            "network": "Unable to contact server. Check your connection."
+        }
+    }
+}

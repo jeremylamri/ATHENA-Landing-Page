@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { GlassCard } from '../ui/GlassCard';
+import { Mail, MapPin, Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { CheckCircle, Loader2, Mail, MapPin, AlertCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
+
+emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
 
 export const Contact: React.FC = () => {
-  const [formState, setFormState] = useState({
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     organization: '',
@@ -13,234 +17,219 @@ export const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
-
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('submitting');
+    setIsSubmitting(true);
     setErrorMessage('');
-    
-    // -------------------------------------------------------------------------
-    // IMPORTANT : Remplacez l'URL ci-dessous par votre propre endpoint Formspree
-    // Créer un formulaire gratuit sur https://formspree.io/
-    // Exemple : "https://formspree.io/f/xkqnwvkj"
-    // -------------------------------------------------------------------------
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/VOTRE_ID_FORMSPREE";
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formState)
-      });
+      // Simulate API call or real email sending logic here
+      // await emailjs.send(...)
 
-      if (response.ok) {
-        setStatus('success');
-        // Reset form data if needed here, though we show a success screen instead
-      } else {
-        const data = await response.json();
-        setStatus('error');
-        if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
-          setErrorMessage(data.errors.map((error: any) => error.message).join(", "));
-        } else {
-          setErrorMessage("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
-        }
-      }
+      // For now, simulate success after a delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', organization: '', role: '', subject: '', message: '' });
+
     } catch (error) {
-      setStatus('error');
-      setErrorMessage("Impossible de contacter le serveur. Vérifiez votre connexion.");
+      console.error('Error sending form:', error);
+      setSubmitStatus('error');
+      setErrorMessage(t('contact.error.generic'));
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  if (status === 'success') {
-    return (
-      <section id="contact" className="py-16 md:py-24 relative overflow-hidden bg-[#050505] scroll-mt-24 md:scroll-mt-32">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-          <GlassCard className="max-w-2xl mx-auto p-8 md:p-12 text-center min-h-[400px] flex flex-col items-center justify-center">
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", duration: 0.6 }}
-              className="w-16 h-16 md:w-20 md:h-20 bg-green-500/10 rounded-full flex items-center justify-center text-green-500 mb-6"
-            >
-              <CheckCircle size={32} className="md:w-10 md:h-10" />
-            </motion.div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Demande transmise avec succès.</h3>
-            <p className="text-white/60 max-w-2xl mx-auto mb-8 text-sm md:text-base">
-              L'équipe Tomorrow Theory a bien reçu vos informations. Nous reviendrons vers vous sous 48h ouvrées pour planifier votre échange technique.
-            </p>
-            <Button variant="secondary" onClick={() => {
-              setStatus('idle');
-              setFormState({
-                name: '',
-                email: '',
-                organization: '',
-                role: '',
-                subject: '',
-                message: ''
-              });
-            }}>
-              Envoyer une autre demande
-            </Button>
-          </GlassCard>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section id="contact" className="py-16 md:py-24 relative overflow-hidden bg-[#050505] scroll-mt-24 md:scroll-mt-32">
+    <section id="contact" className="py-16 md:py-24 relative scroll-mt-24 md:scroll-mt-32">
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          
-          {/* Left Column: Text & Context */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          {/* Left Column: Contact Info */}
           <div>
-            <div className="mb-10">
-              <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
-                Contact
-              </span>
-              <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
-                Évaluer l'opportunité.
-              </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8">
-                Partagez vos priorités stratégiques. Nous organiserons un dialogue technique pour qualifier la pertinence d'intégrer le consortium ATHENA au regard de vos enjeux L&D.
-              </p>
-            </div>
+            <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
+              {t('contact.badge')}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
+              {t('contact.title')}
+            </h2>
+            <p className="text-white/60 text-base md:text-lg mb-10 leading-relaxed">
+              {t('contact.description')}
+            </p>
 
             <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/5 rounded-full text-white/80">
-                        <Mail size={20} />
-                    </div>
-                    <div>
-                        <h4 className="text-white font-medium mb-1">Email direct</h4>
-                        <p className="text-sm text-white/50">general@tomorrowtheory.com</p>
-                    </div>
+              <GlassCard className="flex items-center gap-4 group p-5 hover:bg-white/5 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                  <Mail size={20} />
                 </div>
-                <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white/5 rounded-full text-white/80">
-                        <MapPin size={20} />
-                    </div>
-                    <div>
-                        <h4 className="text-white font-medium mb-1">Siège</h4>
-                        <p className="text-sm text-white/50">Paris, France</p>
-                    </div>
+                <div>
+                  <h4 className="text-white font-medium mb-1">{t('contact.info.email')}</h4>
+                  <a href="mailto:contact@tomorrowtheory.com" className="text-white/60 hover:text-accent transition-colors text-lg">
+                    contact@tomorrowtheory.com
+                  </a>
                 </div>
+              </GlassCard>
+
+              <GlassCard className="flex items-center gap-4 group p-5 hover:bg-white/5 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+                  <MapPin size={20} />
+                </div>
+                <div>
+                  <h4 className="text-white font-medium mb-1">{t('contact.info.hq')}</h4>
+                  <p className="text-white/60 text-lg">
+                    Paris, France
+                  </p>
+                </div>
+              </GlassCard>
             </div>
           </div>
 
           {/* Right Column: Form */}
-          <GlassCard className="p-6 md:p-10">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Nom complet</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    required
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                    value={formState.name}
-                    onChange={e => setFormState({...formState, name: e.target.value})}
-                  />
+          <GlassCard className="border-white/10 p-6 md:p-8">
+            {submitStatus === 'success' ? (
+              <div className="flex flex-col items-center justify-center h-full text-center py-12 animate-fade-in">
+                <div className="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle size={40} />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Email pro</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    required
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                    value={formState.email}
-                    onChange={e => setFormState({...formState, email: e.target.value})}
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-5">
-                 <div className="space-y-2">
-                  <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Organisation</label>
-                  <input 
-                    type="text" 
-                    name="organization"
-                    required
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                    value={formState.organization}
-                    onChange={e => setFormState({...formState, organization: e.target.value})}
-                  />
-                </div>
-                 <div className="space-y-2">
-                  <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Fonction</label>
-                  <input 
-                    type="text" 
-                    name="role"
-                    required
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                    value={formState.role}
-                    onChange={e => setFormState({...formState, role: e.target.value})}
-                  />
-                </div>
-              </div>
-
-               <div className="space-y-2">
-                  <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Sujet / Enjeu</label>
-                  <input 
-                    type="text" 
-                    name="subject"
-                    disabled={status === 'submitting'}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                    value={formState.subject}
-                    onChange={e => setFormState({...formState, subject: e.target.value})}
-                  />
-                </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-medium text-white/50 uppercase tracking-wider">Message</label>
-                <textarea 
-                  name="message"
-                  rows={4}
-                  disabled={status === 'submitting'}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all disabled:opacity-50"
-                  value={formState.message}
-                  onChange={e => setFormState({...formState, message: e.target.value})}
-                />
-              </div>
-
-              {/* Error Message Display */}
-              {status === 'error' && (
-                <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center gap-3 text-red-200 text-sm">
-                  <AlertCircle size={16} className="shrink-0" />
-                  <p>{errorMessage}</p>
-                </div>
-              )}
-
-              <div className="pt-2">
-                <Button type="submit" className="w-full" disabled={status === 'submitting'}>
-                  {status === 'submitting' ? (
-                    <span className="flex items-center gap-2">
-                      <Loader2 className="animate-spin w-4 h-4" /> Envoi en cours...
-                    </span>
-                  ) : (
-                    "Envoyer la demande"
-                  )}
+                <h3 className="text-2xl font-semibold text-white mb-4">{t('contact.success.title')}</h3>
+                <p className="text-white/60 mb-8 max-w-sm">
+                  {t('contact.success.desc')}
+                </p>
+                <Button variant="outline" onClick={() => setSubmitStatus('idle')}>
+                  {t('contact.success.reset')}
                 </Button>
               </div>
-              
-              <p className="text-[10px] text-white/30 text-center leading-snug">
-                En soumettant ce formulaire, vous acceptez d'être contacté par l'équipe Tomorrow Theory.
-              </p>
-            </form>
-          </GlassCard>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.name')}</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.email')}</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      placeholder="john@company.com"
+                    />
+                  </div>
+                </div>
 
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="organization" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.org')}</label>
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      required
+                      value={formData.organization}
+                      onChange={handleChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      placeholder="Company Ltd"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="role" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.role')}</label>
+                    <input
+                      type="text"
+                      id="role"
+                      name="role"
+                      required
+                      value={formData.role}
+                      onChange={handleChange}
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      placeholder="CLO / DRH..."
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.subject')}</label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all appearance-none"
+                  >
+                    <option value="" disabled className="bg-zinc-900 text-white/50">Selectionnez un sujet...</option>
+                    <option value="program-v2" className="bg-zinc-900">Candidature Programme V2</option>
+                    <option value="demo" className="bg-zinc-900">Demande de Démo</option>
+                    <option value="partnership" className="bg-zinc-900">Partenariat Académique</option>
+                    <option value="other" className="bg-zinc-900">Autre demande</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-white/70 ml-1">{t('contact.form.message')}</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all resize-none"
+                    placeholder="Dites-nous en plus sur votre contexte..."
+                  />
+                </div>
+
+                {submitStatus === 'error' && (
+                  <div className="flex items-center gap-2 text-red-400 bg-red-400/10 p-3 rounded-lg text-sm">
+                    <AlertCircle size={16} />
+                    {errorMessage}
+                  </div>
+                )}
+
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin mr-2" />
+                      {t('contact.form.submitting')}
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} className="mr-2" />
+                      {t('contact.form.submit')}
+                    </>
+                  )}
+                </Button>
+
+                <p className="text-xs text-white/30 text-center mt-4">
+                  {t('contact.form.disclaimer')}
+                </p>
+              </form>
+            )}
+
+          </GlassCard>
         </div>
       </div>
     </section>

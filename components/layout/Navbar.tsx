@@ -2,21 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const { t } = useTranslation();
 
   const navLinks = [
-    { label: 'Problème', href: '#defi' },
-    { label: 'Modèle', href: '#modele' },
-    { label: 'ATHENA AI', href: '#outil' },
-    { label: 'Capacités', href: '#capacites' },
-    { label: 'Preuves', href: '#preuves' },
-    { label: 'Programme V2', href: '#v2' },
-    { label: 'IP & Droits', href: '#ip' },
-    { label: 'À propos', href: '#about' },
+    { label: t('nav.problem'), href: '#defi' },
+    { label: t('nav.model'), href: '#modele' },
+    { label: t('nav.ai'), href: '#outil' },
+    { label: t('nav.capabilities'), href: '#capacites' },
+    { label: t('nav.social_proof'), href: '#preuves' },
+    { label: t('nav.offer'), href: '#v2' },
+    { label: t('nav.ip'), href: '#ip' },
+    { label: t('nav.about'), href: '#about' },
   ];
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export const Navbar: React.FC = () => {
       for (const link of navLinks) {
         const sectionId = link.href.replace('#', '');
         const element = document.getElementById(sectionId);
-        
+
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (
@@ -71,9 +74,8 @@ export const Navbar: React.FC = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled || mobileMenuOpen ? 'glass-panel border-b border-white/5 py-4' : 'bg-transparent py-6'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled || mobileMenuOpen ? 'glass-panel border-b border-white/5 py-4' : 'bg-transparent py-6'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#" onClick={scrollToTop} className="text-2xl font-semibold tracking-tight text-white flex items-center gap-3">
@@ -89,31 +91,34 @@ export const Navbar: React.FC = () => {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.label} 
+              <a
+                key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-sm transition-colors cursor-pointer ${
-                  activeSection === link.href 
-                    ? 'text-accent font-medium' 
+                className={`text-sm transition-colors cursor-pointer ${activeSection === link.href
+                    ? 'text-accent font-medium'
                     : 'text-white/70 hover:text-white'
-                }`}
+                  }`}
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="secondary" className="!py-2 !px-4 text-xs" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-              Demander un échange
+            <LanguageSwitcher />
+            <Button variant="secondary" className="!py-2 !px-4 text-xs" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              {t('hero.cta_talk')}
             </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
-            className="lg:hidden text-white/70 hover:text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-4">
+            <LanguageSwitcher />
+            <button
+              className="text-white/70 hover:text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -129,22 +134,21 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col gap-6">
               {navLinks.map((link, i) => (
                 <motion.a
-                  key={link.label}
+                  key={link.href}
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
                   href={link.href}
-                  className={`text-2xl font-light flex items-center justify-between border-b border-white/10 pb-4 cursor-pointer ${
-                    activeSection === link.href ? 'text-accent' : 'text-white/90'
-                  }`}
+                  className={`text-2xl font-light flex items-center justify-between border-b border-white/10 pb-4 cursor-pointer ${activeSection === link.href ? 'text-accent' : 'text-white/90'
+                    }`}
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                   <ChevronRight className={activeSection === link.href ? 'text-accent' : 'text-white/30'} />
                 </motion.a>
               ))}
-              <Button variant="primary" className="w-full mt-4" onClick={() => { setMobileMenuOpen(false); document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'}); }}>
-                Demander un échange
+              <Button variant="primary" className="w-full mt-4" onClick={() => { setMobileMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                {t('hero.cta_talk')}
               </Button>
             </div>
           </motion.div>

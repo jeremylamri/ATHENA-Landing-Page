@@ -1,71 +1,71 @@
 import React from 'react';
 import { GlassCard } from '../ui/GlassCard';
-import { Flag, Users, Lightbulb } from 'lucide-react';
+import { Award, Globe, Zap } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const About: React.FC = () => {
+  const { t } = useTranslation();
   return (
-    <section id="about" className="py-16 md:py-24 bg-black border-t border-white/5 scroll-mt-24 md:scroll-mt-32">
+    <section id="about" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24 md:scroll-mt-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* Alignement items-start pour coller le bloc de gauche en haut */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
-              A propos de Tomorrow Theory
+              {t('about.badge')}
             </span>
             <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
-              Préparez le futur du travail.
+              {t('about.title')}
             </h2>
-            <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6">
-              Notre métier est de vous accompagner dans l’anticipation et l’intégration des grands enjeux du futur du travail et des RH, pour vous permettre de mieux attirer, développer et fidéliser vos talents.
-            </p>
-            <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6">
-              Nos approches combinent la maîtrise des sciences, des technologies et des techniques d’influence pour accompagner efficacement tous les stades de votre transformation.
-            </p>
-             <p className="text-white/60 text-base md:text-lg leading-relaxed">
-              Le projet ATHENA incarne cette vision : une technologie sobre, transparente et au service d'une pédagogie de précision.
-            </p>
+            <div className="prose prose-invert max-w-none text-white/70 text-base md:text-lg leading-relaxed">
+              <p className="mb-4">
+                {t('about.desc_1')}
+              </p>
+              <p className="mb-4">
+                {t('about.desc_2')}
+              </p>
+              <p>
+                {t('about.desc_3')}
+              </p>
+            </div>
           </div>
 
-          <div className="grid gap-4">
-            {/* Cartes plus compactes (!p-6) et titre aligné avec l'icône */}
-            <GlassCard className="!p-6" hoverEffect>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-blue-900/20 rounded-lg text-blue-400 shrink-0">
-                  <Flag size={20} />
-                </div>
-                <h3 className="text-base md:text-lg font-medium text-white">Souveraineté & Indépendance</h3>
+          <div className="space-y-4 md:space-y-6">
+            <GlassCard className="flex items-start gap-4">
+              <div className="bg-accent/10 p-3 rounded-lg text-accent shrink-0">
+                <Globe size={24} />
               </div>
-              <p className="text-white/60 text-sm leading-relaxed pl-1">
-                Acteur aux capitaux 100% français, Tomorrow Theory joue pleinement le jeu d'une Europe souveraine.
-              </p>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t('about.cards.sovereignty.title')}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  {t('about.cards.sovereignty.desc')}
+                </p>
+              </div>
             </GlassCard>
 
-            <GlassCard className="!p-6" hoverEffect>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-purple-900/20 rounded-lg text-purple-400 shrink-0">
-                  <Users size={20} />
-                </div>
-                <h3 className="text-base md:text-lg font-medium text-white">Leadership de l'Écosystème</h3>
+            <GlassCard className="flex items-start gap-4">
+              <div className="bg-accent/10 p-3 rounded-lg text-accent shrink-0">
+                <Award size={24} />
               </div>
-              <p className="text-white/60 text-sm leading-relaxed pl-1">
-                Fondé par des passionnés du futur du travail, co-fondateurs historiques du <strong className="text-white/90">Lab RH</strong> et du <strong className="text-white/90">Hub France IA</strong>.
-              </p>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t('about.cards.leadership.title')}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  <Trans i18nKey="about.cards.leadership.desc" />
+                </p>
+              </div>
             </GlassCard>
-            
-             <GlassCard className="!p-6" hoverEffect>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-yellow-900/20 rounded-lg text-yellow-400 shrink-0">
-                  <Lightbulb size={20} />
-                </div>
-                <h3 className="text-base md:text-lg font-medium text-white">Innovation de Rupture</h3>
+
+            <GlassCard className="flex items-start gap-4">
+              <div className="bg-accent/10 p-3 rounded-lg text-accent shrink-0">
+                <Zap size={24} />
               </div>
-              <p className="text-white/60 text-sm leading-relaxed pl-1">
-                Une approche radicale qui privilégie la recherche-action et la preuve scientifique au marketing de la promesse.
-              </p>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t('about.cards.innovation.title')}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">
+                  {t('about.cards.innovation.desc')}
+                </p>
+              </div>
             </GlassCard>
           </div>
-
         </div>
       </div>
     </section>

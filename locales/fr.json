@@ -1,0 +1,212 @@
+{
+    "hero": {
+        "badge": "PROGRAMME DE RECHERCHE-ACTION",
+        "title": "Professionnalisez l'ingénierie des compétences avec ATHENA",
+        "subtitle_strong": "L'initiative qui redéfinit les standards de l'ingénierie de formation pour la décennie à venir.",
+        "subtitle": "ATHENA dote les directions L&D d'un outil d'une puissance inédite pour redéfinir les standards de la formation, et augmenter l'ingénierie pédagogique par la science et la technologie.",
+        "cta_talk": "Demander un échange",
+        "cta_download": "Télécharger le one-pager"
+    },
+    "nav": {
+        "problem": "Problème",
+        "model": "Modèle",
+        "ai": "IA",
+        "capabilities": "Capacités",
+        "social_proof": "Preuve Sociale",
+        "offer": "Offre V2",
+        "ip": "IP & Data",
+        "about": "À propos",
+        "contact": "Contact"
+    },
+    "footer": {
+        "rights": "Tous droits réservés.",
+        "legal": "Mentions légales",
+        "studio": "Découvrez Tomorrow Theory, le studio de l'innovation RH",
+        "contact": "Contact"
+    },
+    "ai": {
+        "badge": "L'Intelligence Artificielle",
+        "title": "Ingénierie Augmentée.",
+        "description": "ATHENA AI opérationnalise le modèle théorique sans en réduire la richesse. L'IA agit comme un amplificateur de raisonnement pour structurer l'architecture pédagogique, sans jamais masquer la complexité sous-jacente.",
+        "architecture": {
+            "title": "Architecture Cognitive Composite",
+            "desc": "ATHENA ne repose pas sur un modèle unique, mais sur une orchestration de plusieurs LLMs spécialisés. Cette chaîne d'agents collabore séquentiellement pour disséquer le besoin, vérifier la cohérence pédagogique et sécuriser les livrables."
+        },
+        "modules": {
+            "skills": {
+                "title": "ATHENA Skills",
+                "desc": "Déconstruction analytique de toute compétence en <strong class=\"text-white/80\">60 facettes</strong>, chacune évaluée sur <strong class=\"text-white/80\">4 niveaux distincts</strong>, pour identifier les prérequis cognitifs et comportementaux.",
+                "deliverable": "Livrable : Cartographie des facettes"
+            },
+            "profile": {
+                "title": "ATHENA Profile",
+                "desc": "Caractérisation multidimensionnelle du contexte d'apprentissage (17 facteurs) pour assurer l'alignement entre le dispositif pédagogique et la réalité opérationnelle des apprenants.",
+                "deliverable": "Livrable : Paramétrage contextuel"
+            },
+            "learn": {
+                "title": "ATHENA Learn",
+                "desc": "Assemblage raisonné de modalités pédagogiques, sélectionnées parmi 220+ formats indexés, justifié par l'adéquation entre objectifs cognitifs et leviers d'apprentissage.",
+                "deliverable": "Livrable : Scénario d'architecture"
+            }
+        }
+    },
+    "capabilities": {
+        "badge": "Capacités Stratégiques",
+        "title": "Nouvelles capacités pour la direction L&D.",
+        "description": "Au-delà de l'outillage, ATHENA modifie la gouvernance de la formation. Le système instaure une pratique de décision fondée sur la donnée probante et la traçabilité des choix.",
+        "cards": {
+            "objectivation": {
+                "title": "Objectivation des choix pédagogiques",
+                "desc": "Substituer à l'intuition une argumentation technique traçable. ATHENA relie chaque modalité retenue à une intention pédagogique explicite, corrélée aux facettes contributives de la compétence."
+            },
+            "modeling": {
+                "title": "Modélisation comparative",
+                "desc": "Évaluer ex-ante différentes architectures de formation. Le système permet de mettre en regard plusieurs scénarios d'investissement pédagogique selon les contraintes de ressources et de temps."
+            },
+            "transparency": {
+                "title": "Transparence décisionnelle",
+                "desc": "Expliciter les renoncements nécessaires. En rendant visibles les arbitrages (profondeur vs couverture), ATHENA qualifie le dialogue entre L&D et commanditaires métier."
+            },
+            "tactics": {
+                "title": "Diversification tactique",
+                "desc": "Rompre avec les automatismes de conception. L'indexation de plus de 220 modalités permet de mobiliser l'intégralité du spectre pédagogique pour répondre à la complexité des besoins."
+            },
+            "capitalization": {
+                "title": "Constitution d'un patrimoine technique",
+                "desc": "Transformer chaque projet en actif pour l'organisation. Les analyses et architectures sont capitalisées dans une base de connaissances structurée, favorisant l'amélioration continue des pratiques."
+            }
+        },
+        "conclusion": "Vers une ingénierie de formation plus explicite, cumulative et stratégique."
+    },
+    "social_proof": {
+        "badge": "Preuves & Validation",
+        "title": "Un aboutissement scientifique.",
+        "desc_1": "ATHENA n'est pas une expérimentation isolée, mais le point de rupture d'une lignée de recherche. Le système cristallise <strong class=\"text-white/80\">plus de 10 ans de R&D continue</strong> sur la modélisation de la performance humaine.",
+        "desc_2": "Pour démontrer l'application sur le terrain du projet ATHENA, Tomorrow Theory a constitué début 2025 un consortium, aux côtés de <strong class=\"text-white/80\">Decathlon</strong>, <strong class=\"text-white/80\">Crédit Mutuel Alliance Fédérale</strong>, et <strong class=\"text-white/80\">Bouygues</strong>. Ce consortium a permis d'accélérer fortement les travaux en lien avec ATHENA.",
+        "recognition": "ATHENA bénéficie déjà d'une reconnaissance académique, avec 3 articles de recherche publiés dans des revues académiques internationales prestigieuses. Ces articles totalisent déjà près de 50 000 vues dans le monde de la recherche, démontrant l'intérêt fort pour la démarche ATHENA.",
+        "publications": {
+            "read_article": "Lire l'article complet",
+            "status_published": "Publié"
+        }
+    },
+    "v2": {
+        "badge": "Le Programme",
+        "title": "Programme ATHENA V2.",
+        "intro": "Dès avril 2026, la phase 2 du programme réunira un consortium restreint de partenaires. L'objectif est la consolidation des standards méthodologiques et l'optimisation des algorithmes d'aide à la conception.",
+        "benefits": {
+            "title": "Pour l'organisation partenaire, l'intégration au programme apporte :",
+            "list": {
+                "grid": "Une grille de lecture haute définition des compétences stratégiques.",
+                "break": "Une rupture avec les automatismes de conception pédagogique.",
+                "rationalization": "Une rationalisation des investissements basée sur la preuve.",
+                "relevance": "Une pertinence accrue des dispositifs perçue par le terrain.",
+                "sharing": "Un partage de bonnes pratiques avec des experts d'autres organisations partenaires."
+            }
+        },
+        "phases": {
+            "framing": {
+                "title": "Cadrage & Alignement",
+                "desc": "Définition des périmètres d'expérimentation et constitution de la task-force."
+            },
+            "modeling": {
+                "title": "Modélisation & Test",
+                "desc": "Épreuve du modèle sur des cas d'usage réels et critiques."
+            },
+            "anchoring": {
+                "title": "Ancrage méthodologique",
+                "desc": "Transfert de compétences et appropriation de l'outil par les concepteurs."
+            },
+            "projection": {
+                "title": "Bilan & Projection",
+                "desc": "Consolidation des résultats et livraison des actifs finaux."
+            }
+        },
+        "community": {
+            "title": "Projet Communautaire",
+            "desc": "Le consortium dépasse la relation client-fournisseur. Nous animons une communauté de partenaires L&D en mode <strong class=\"text-white\">innovation ouverte</strong> : partage des meilleures pratiques et apports professionnalisants sur les travaux de Tomorrow Theory."
+        },
+        "card": {
+            "title": "Modalités d'adhésion",
+            "start_label": "Démarrage",
+            "start_value": "Avril 2026",
+            "duration_label": "Durée du cycle",
+            "duration_value": "12 mois",
+            "consortium_label": "Consortium",
+            "consortium_value": "6 partenaires max.",
+            "contribution_label": "Contribution financière",
+            "cta": "Candidater au programme",
+            "governance_label": "Gouvernance requise :",
+            "governance_value": "Sponsor exécutif + Chef de projet + Experts métier."
+        }
+    },
+    "ip": {
+        "badge": "Propriété Intellectuelle",
+        "title": "Indépendance technologique.",
+        "description": "La philosophie du programme est de renforcer l'autonomie des organisations, et non de créer une dépendance logicielle supplémentaire.",
+        "cards": {
+            "transfer": {
+                "title": "Transfert intégral",
+                "desc": "Chaque partenaire bénéficie d'un transfert complet des actifs produits durant la V2 (modèles, algorithmes, codes sources), assurant la maîtrise de la chaîne de valeur."
+            },
+            "free_use": {
+                "title": "Exploitation libre",
+                "desc": "Droit d'usage et de modification illimité en interne, garantissant l'absence totale de \"lock-in\" technologique ou de redevance future."
+            },
+            "data_privacy": {
+                "title": "Cloisonnement des données",
+                "desc": "Stricte confidentialité des données et des cas d'usage spécifiques à chaque organisation. Pas de mutualisation des données sensibles au sein du consortium."
+            }
+        },
+        "disclaimer": "Tomorrow Theory conserve la propriété intellectuelle originale et le droit de développement ultérieur. Les partenaires demeurent libres de pérenniser ou non l'usage des actifs transférés à l'issue du programme."
+    },
+    "about": {
+        "badge": "A propos de Tomorrow Theory",
+        "title": "Préparez le futur du travail.",
+        "desc_1": "Notre métier est de vous accompagner dans l’anticipation et l’intégration des grands enjeux du futur du travail et des RH, pour vous permettre de mieux attirer, développer et fidéliser vos talents.",
+        "desc_2": "Nos approches combinent la maîtrise des sciences, des technologies et des techniques d’influence pour accompagner efficacement tous les stades de votre transformation.",
+        "desc_3": "Le projet ATHENA incarne cette vision : une technologie sobre, transparente et au service d'une pédagogie de précision.",
+        "cards": {
+            "sovereignty": {
+                "title": "Souveraineté & Indépendance",
+                "desc": "Acteur aux capitaux 100% français, Tomorrow Theory joue pleinement le jeu d'une Europe souveraine."
+            },
+            "leadership": {
+                "title": "Leadership de l'Écosystème",
+                "desc": "Fondé par des passionnés du futur du travail, co-fondateurs historiques du <strong class=\"text-white/90\">Lab RH</strong> et du <strong class=\"text-white/90\">Hub France IA</strong>."
+            },
+            "innovation": {
+                "title": "Innovation de Rupture",
+                "desc": "Une approche radicale qui privilégie la recherche-action et la preuve scientifique au marketing de la promesse."
+            }
+        }
+    },
+    "contact": {
+        "badge": "Contact",
+        "title": "Évaluer l'opportunité.",
+        "description": "Partagez vos priorités stratégiques. Nous organiserons un dialogue technique pour qualifier la pertinence d'intégrer le consortium ATHENA au regard de vos enjeux L&D.",
+        "info": {
+            "email": "Email direct",
+            "hq": "Siège"
+        },
+        "form": {
+            "name": "Nom complet",
+            "email": "Email pro",
+            "org": "Organisation",
+            "role": "Fonction",
+            "subject": "Sujet / Enjeu",
+            "message": "Message",
+            "submit": "Envoyer la demande",
+            "submitting": "Envoi en cours...",
+            "disclaimer": "En soumettant ce formulaire, vous acceptez d'être contacté par l'équipe Tomorrow Theory."
+        },
+        "success": {
+            "title": "Demande transmise avec succès.",
+            "desc": "L'équipe Tomorrow Theory a bien reçu vos informations. Nous reviendrons vers vous sous 48h ouvrées pour planifier votre échange technique.",
+            "reset": "Envoyer une autre demande"
+        },
+        "error": {
+            "generic": "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+            "network": "Impossible de contacter le serveur. Vérifiez votre connexion."
+        }
+    }
+}

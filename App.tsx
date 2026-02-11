@@ -1,56 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/layout/Navbar';
-import { Hero } from './components/sections/Hero';
-import { Problem } from './components/sections/Problem';
-import { Model } from './components/sections/Model';
-import { AthenaAI } from './components/sections/AthenaAI';
-import { Capabilities } from './components/sections/Capabilities';
-import { SocialProof } from './components/sections/SocialProof';
-import { V2Offer } from './components/sections/V2Offer';
-import { IPRights } from './components/sections/IPRights';
-import { Contact } from './components/sections/Contact';
-import { About } from './components/sections/About';
-import { Footer } from './components/layout/Footer';
-import { OnePager } from './components/documents/OnePager';
-import { LegalNotice } from './components/documents/LegalNotice';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { OnePagerPage } from './pages/OnePagerPage';
+import { Legal } from './pages/Legal';
 
-function App() {
-  const [view, setView] = useState('landing');
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('view') === 'one-pager') {
-      setView('one-pager');
-    }
-  }, []);
-
-  if (view === 'one-pager') {
-    return <OnePager />;
-  }
-
-  if (view === 'legal') {
-    return <LegalNotice onBack={() => setView('landing')} />;
-  }
+function AppRoutes() {
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen text-white selection:bg-accent/30 selection:text-white">
-      <Navbar />
-      
-      <main>
-        <Hero />
-        <Problem />
-        <Model />
-        <AthenaAI />
-        <Capabilities />
-        <SocialProof />
-        <V2Offer />
-        <IPRights />
-        <About />
-        <Contact />
-      </main>
+    <Routes>
+      <Route path="/" element={<Home onLegalClick={() => navigate('/legal')} />} />
+      <Route path="/one-pager" element={<OnePagerPage />} />
+      <Route path="/legal" element={<Legal onBack={() => navigate('/')} />} />
+    </Routes>
+  );
+}
 
-      <Footer onLegalClick={() => setView('legal')} />
-    </div>
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 

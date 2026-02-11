@@ -1,32 +1,35 @@
 import React from 'react';
 import { GlassCard } from '../ui/GlassCard';
 import { CheckCircle2, GitCompare, GitCommit, Zap, HardDrive } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Capabilities: React.FC = () => {
+  const { t } = useTranslation();
+
   const capabilities = [
     {
-      title: "Objectivation des choix pédagogiques",
-      desc: "Substituer à l'intuition une argumentation technique traçable. ATHENA relie chaque modalité retenue à une intention pédagogique explicite, corrélée aux facettes contributives de la compétence.",
+      title: t('capabilities.cards.objectivation.title'),
+      desc: t('capabilities.cards.objectivation.desc'),
       icon: <CheckCircle2 size={24} />
     },
     {
-      title: "Modélisation comparative",
-      desc: "Évaluer ex-ante différentes architectures de formation. Le système permet de mettre en regard plusieurs scénarios d'investissement pédagogique selon les contraintes de ressources et de temps.",
+      title: t('capabilities.cards.modeling.title'),
+      desc: t('capabilities.cards.modeling.desc'),
       icon: <GitCompare size={24} />
     },
     {
-      title: "Transparence décisionnelle",
-      desc: "Expliciter les renoncements nécessaires. En rendant visibles les arbitrages (profondeur vs couverture), ATHENA qualifie le dialogue entre L&D et commanditaires métier.",
+      title: t('capabilities.cards.transparency.title'),
+      desc: t('capabilities.cards.transparency.desc'),
       icon: <GitCommit size={24} />
     },
     {
-      title: "Diversification tactique",
-      desc: "Rompre avec les automatismes de conception. L'indexation de plus de 220 modalités permet de mobiliser l'intégralité du spectre pédagogique pour répondre à la complexité des besoins.",
+      title: t('capabilities.cards.tactics.title'),
+      desc: t('capabilities.cards.tactics.desc'),
       icon: <Zap size={24} />
     },
     {
-      title: "Constitution d'un patrimoine technique",
-      desc: "Transformer chaque projet en actif pour l'organisation. Les analyses et architectures sont capitalisées dans une base de connaissances structurée, favorisant l'amélioration continue des pratiques.",
+      title: t('capabilities.cards.capitalization.title'),
+      desc: t('capabilities.cards.capitalization.desc'),
       icon: <HardDrive size={24} />
     }
   ];
@@ -36,13 +39,13 @@ export const Capabilities: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="mb-12 md:mb-16">
           <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
-            Capacités Stratégiques
+            {t('capabilities.badge')}
           </span>
           <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
-            Nouvelles capacités pour la direction L&D.
+            {t('capabilities.title')}
           </h2>
           <p className="text-white/60 text-base md:text-lg">
-            Au-delà de l'outillage, ATHENA modifie la gouvernance de la formation. Le système instaure une pratique de décision fondée sur la donnée probante et la traçabilité des choix.
+            {t('capabilities.description')}
           </p>
         </div>
 
@@ -59,9 +62,9 @@ export const Capabilities: React.FC = () => {
             </GlassCard>
           ))}
         </div>
-        
+
         <div className="mt-12 md:mt-16">
-            <p className="text-white/80 font-medium text-base md:text-lg">Vers une ingénierie de formation plus explicite, cumulative et stratégique.</p>
+          <p className="text-white/80 font-medium text-base md:text-lg">{t('capabilities.conclusion')}</p>
         </div>
       </div>
     </section>
