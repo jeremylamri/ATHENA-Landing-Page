@@ -13,6 +13,57 @@
             "levels": "Levels"
         }
     },
+    "problem": {
+        "badge": "The Problem",
+        "title": "Training engineering is at a dead end.",
+        "description": "Faced with accelerated skills obsolescence, artisanal methods are no longer sufficient. The gap is widening between field reality and training response.",
+        "cards": {
+            "granularity": {
+                "title": "Insufficient Granularity",
+                "desc": "Skills are treated as monolithic blocks, ignoring fine cognitive nuances."
+            },
+            "content_first": {
+                "title": "Content-First Approach",
+                "desc": "Pushing existing content rather than starting from structural need analysis."
+            },
+            "context": {
+                "title": "Context Disconnection",
+                "desc": "The learner's real environment is rarely taken into account in the design."
+            }
+        }
+    },
+    "model": {
+        "badge": "The Model",
+        "title": "Systemic Modeling.",
+        "desc_1": "ATHENA does not just automate tasks. It structures pedagogical thinking according to a proven proprietary model.",
+        "desc_2": "Each decision is weighed, argued, and traceable.",
+        "dimensions": {
+            "cognition": {
+                "title": "Cognition",
+                "desc": "Mental processes and cognitive load."
+            },
+            "knowledge": {
+                "title": "Knowledge",
+                "desc": "Nature and structure of knowledge."
+            },
+            "conation": {
+                "title": "Conation",
+                "desc": "Learner motivation and volition."
+            },
+            "emotion": {
+                "title": "Emotion",
+                "desc": "Affective factors and feelings."
+            },
+            "sensorimotor": {
+                "title": "Sensorimotor",
+                "desc": "Physical and perceptual skills."
+            }
+        },
+        "analogy": {
+            "title": "The Chemistry of Competence",
+            "text": "Just as chemistry decomposes matter into atoms, ATHENA decomposes competence into its fundamental elements to better reconstruct it."
+        }
+    },
     "nav": {
         "problem": "Problem",
         "model": "Model",

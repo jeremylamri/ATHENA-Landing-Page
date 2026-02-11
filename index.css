@@ -36,7 +36,7 @@
         --secondary-foreground: 210 40% 98%;
         --muted: 217.2 32.6% 17.5%;
         --muted-foreground: 215 20.2% 65.1%;
-        --accent: 210 100% 50%;
+        --accent: 210 100% 46%;
         --accent-foreground: 210 40% 98%;
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 210 40% 98%;
@@ -52,8 +52,49 @@
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground antialiased selection:bg-accent/30 selection:text-white;
     }
+
+    /* Headings tracking */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply tracking-tight;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-white/10 rounded-full border-2 border-black hover:bg-white/20 transition-colors;
+    }
+}
+
+@utility glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+@keyframes shine {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@utility glow-focus {
+    @apply focus:outline-none focus:border-accent transition-all duration-300 focus:shadow-[0_0_20px_hsl(var(--accent)/0.3)];
 }
 
 /* Print Styles */

@@ -13,6 +13,57 @@
             "levels": "Niveaux"
         }
     },
+    "problem": {
+        "badge": "Le Problème",
+        "title": "L'ingénierie de formation est dans une impasse.",
+        "description": "Face à l'obsolescence accélérée des compétences, les méthodes artisanales ne suffisent plus. Le décalage se creuse entre la réalité du terrain et la réponse formation.",
+        "cards": {
+            "granularity": {
+                "title": "Granularité insuffisante",
+                "desc": "Les compétences sont traitées comme des blocs monolithiques, ignorant les nuances cognitives fines."
+            },
+            "content_first": {
+                "title": "Approche Content-First",
+                "desc": "On pousse du contenu existant plutôt que de partir de l'analyse structurelle du besoin."
+            },
+            "context": {
+                "title": "Déconnexion du contexte",
+                "desc": "L'environnement réel de l'apprenant est raremenent pris en compte dans le design."
+            }
+        }
+    },
+    "model": {
+        "badge": "Le Modèle",
+        "title": "Une modélisation systémique.",
+        "desc_1": "ATHENA ne se contente pas d'automatiser des tâches. Elle structure la pensée pédagogique selon un modèle propriétaire éprouvé.",
+        "desc_2": "Chaque décision est pesée, argumentée et traçable.",
+        "dimensions": {
+            "cognition": {
+                "title": "Cognition",
+                "desc": "Processus mentaux et charge cognitive."
+            },
+            "knowledge": {
+                "title": "Savoirs",
+                "desc": "Nature et structure des connaissances."
+            },
+            "conation": {
+                "title": "Conation",
+                "desc": "Motivation et volition de l'apprenant."
+            },
+            "emotion": {
+                "title": "Émotion",
+                "desc": "Facteurs affectifs et ressentis."
+            },
+            "sensorimotor": {
+                "title": "Sensorimoteur",
+                "desc": "Habiletés physiques et perceptives."
+            }
+        },
+        "analogy": {
+            "title": "La chimie de la compétence",
+            "text": "Tout comme la chimie décompose la matière en atomes, ATHENA décompose la compétence en ses éléments fondamentaux pour mieux la reconstruire."
+        }
+    },
     "nav": {
         "problem": "Problème",
         "model": "Modèle",

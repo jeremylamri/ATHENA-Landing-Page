@@ -40,7 +40,7 @@ export const SocialProof: React.FC = () => {
           <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
             {t('social_proof.badge')}
           </span>
-          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-accent leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
             {t('social_proof.title')}
           </h2>
           <p className="text-white/60 text-base md:text-lg mb-6">

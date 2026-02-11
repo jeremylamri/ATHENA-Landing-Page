@@ -6,15 +6,31 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/drive/16qBY5-5V5HfWUT-_CBkaWu9wp_kJf26D
+View your app in AI Studio: <https://ai.studio/apps/drive/16qBY5-5V5HfWUT-_CBkaWu9wp_kJf26D>
+
+## Features
+
+- **Architecture:** React 19, Vite, TypeScript, Tailwind CSS v4.
+- **Routing:** SPA navigation with `react-router-dom` (Home, OnePager, Legal).
+- **Internationalization (i18n):** Full FR/EN support with `i18next`.
+- **UI/UX:** Premium animations (`framer-motion`), glassmorphism, and responsive design.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js v18+
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the dev server:
    `npm run dev`
+3. Build for production:
+   `npm run build`
+
+## Localization
+
+Translations are stored in `public/locales/`.
+
+- `fr.json`: French (Default)
+- `en.json`: English
+
+To add a new language, create a file in `public/locales/` and update `src/i18n.ts`.

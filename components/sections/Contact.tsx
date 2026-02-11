@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
             <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
               {t('contact.badge')}
             </span>
-            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-accent leading-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
               {t('contact.title')}
             </h2>
             <p className="text-white/60 text-base md:text-lg mb-10 leading-relaxed">
@@ -122,7 +122,7 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all"
                       placeholder="John Doe"
                     />
                   </div>
@@ -135,7 +135,7 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -151,7 +151,7 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.organization}
                       onChange={handleChange}
-                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all"
                       placeholder="Company Ltd"
                     />
                   </div>
@@ -164,7 +164,7 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.role}
                       onChange={handleChange}
-                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all"
+                      className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all"
                       placeholder="CLO / DRH..."
                     />
                   </div>
@@ -178,7 +178,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all appearance-none"
+                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all appearance-none"
                   >
                     <option value="" disabled className="bg-zinc-900 text-white/50">Selectionnez un sujet...</option>
                     <option value="program-v2" className="bg-zinc-900">Candidature Programme V2</option>
@@ -197,7 +197,7 @@ export const Contact: React.FC = () => {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-all resize-none"
+                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 glow-focus transition-all resize-none"
                     placeholder="Dites-nous en plus sur votre contexte..."
                   />
                 </div>
