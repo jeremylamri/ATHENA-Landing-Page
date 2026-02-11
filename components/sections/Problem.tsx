@@ -9,7 +9,7 @@ export const Problem: React.FC = () => {
   return (
     <section id="defi" className="py-16 md:py-24 bg-black relative scroll-mt-24 md:scroll-mt-32 overflow-hidden">
       {/* Ambient Glow */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-12 md:mb-16">

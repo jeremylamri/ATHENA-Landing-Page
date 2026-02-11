@@ -40,23 +40,23 @@
         "dimensions": {
             "cognition": {
                 "title": "Cognition",
-                "desc": "Processus mentaux et charge cognitive."
+                "desc": "Capacités d'analyse, de raisonnement, de décision et d'anticipation."
             },
             "knowledge": {
-                "title": "Savoirs",
-                "desc": "Nature et structure des connaissances."
+                "title": "Connaissances",
+                "desc": "Savoirs déclaratifs, procéduraux et contextuels mobilisables."
             },
             "conation": {
                 "title": "Conation",
-                "desc": "Motivation et volition de l'apprenant."
+                "desc": "Facteurs de motivation, d'effort, de persévérance et de clairvoyance."
             },
             "emotion": {
                 "title": "Émotion",
-                "desc": "Facteurs affectifs et ressentis."
+                "desc": "Traitement de l'information émotionnelle, stress et autorégulation."
             },
             "sensorimotor": {
-                "title": "Sensorimoteur",
-                "desc": "Habiletés physiques et perceptives."
+                "title": "Sensorimotion",
+                "desc": "Perception sensorielle fine, coordination et précision gestuelle."
             }
         },
         "analogy": {

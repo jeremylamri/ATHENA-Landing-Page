@@ -26,7 +26,7 @@ export const OnePager: React.FC = () => {
                 <Button variant="secondary" className="!bg-slate-800 !text-white shadow-xl" onClick={() => navigate('/')}>
                     <ArrowLeft size={16} className="mr-2" /> {t('onepager.back_home')}
                 </Button>
-                <Button variant="primary" className="!bg-blue-600 !text-white hover:!bg-blue-700 shadow-xl" onClick={handlePrint}>
+                <Button variant="primary" className="!bg-accent-600 !text-white hover:!bg-accent-700 shadow-xl" onClick={handlePrint}>
                     <Download size={16} className="mr-2" /> {t('onepager.print_save')}
                 </Button>
             </div>
@@ -63,25 +63,25 @@ export const OnePager: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-span-12 md:col-span-8">
-                        <h2 className="text-sm font-bold uppercase tracking-wider text-blue-600 mb-3">{t('onepager.prop.title')}</h2>
+                        <h2 className="text-sm font-bold uppercase tracking-wider text-accent-600 mb-3">{t('onepager.prop.title')}</h2>
                         <p className="text-lg font-medium leading-snug text-slate-900 mb-4">
                             {t('onepager.prop.text')}
                         </p>
                         <ul className="grid grid-cols-2 gap-4">
                             <li className="flex items-start gap-2 text-sm text-slate-700">
-                                <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                                <CheckCircle2 size={16} className="text-accent-600 mt-0.5 shrink-0" />
                                 <span>{t('onepager.prop.list.precision')}</span>
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-700">
-                                <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                                <CheckCircle2 size={16} className="text-accent-600 mt-0.5 shrink-0" />
                                 <span>{t('onepager.prop.list.context')}</span>
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-700">
-                                <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                                <CheckCircle2 size={16} className="text-accent-600 mt-0.5 shrink-0" />
                                 <span>{t('onepager.prop.list.tactic')}</span>
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-700">
-                                <CheckCircle2 size={16} className="text-blue-600 mt-0.5 shrink-0" />
+                                <CheckCircle2 size={16} className="text-accent-600 mt-0.5 shrink-0" />
                                 <span>{t('onepager.prop.list.levels')}</span>
                             </li>
                         </ul>
@@ -93,7 +93,7 @@ export const OnePager: React.FC = () => {
                     <h2 className="text-xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-200">{t('onepager.ecosystem.title')}</h2>
                     <div className="grid grid-cols-3 gap-6">
                         <div className="border border-slate-200 rounded-lg p-5">
-                            <div className="flex items-center gap-2 mb-3 text-blue-700">
+                            <div className="flex items-center gap-2 mb-3 text-accent-700">
                                 <Atom size={20} />
                                 <h3 className="font-bold">{t('onepager.ecosystem.skills.title')}</h3>
                             </div>
@@ -102,7 +102,7 @@ export const OnePager: React.FC = () => {
                             </p>
                         </div>
                         <div className="border border-slate-200 rounded-lg p-5">
-                            <div className="flex items-center gap-2 mb-3 text-blue-700">
+                            <div className="flex items-center gap-2 mb-3 text-accent-700">
                                 <Target size={20} />
                                 <h3 className="font-bold">{t('onepager.ecosystem.profile.title')}</h3>
                             </div>
@@ -111,7 +111,7 @@ export const OnePager: React.FC = () => {
                             </p>
                         </div>
                         <div className="border border-slate-200 rounded-lg p-5">
-                            <div className="flex items-center gap-2 mb-3 text-blue-700">
+                            <div className="flex items-center gap-2 mb-3 text-accent-700">
                                 <Calendar size={20} />
                                 <h3 className="font-bold">{t('onepager.ecosystem.learn.title')}</h3>
                             </div>
@@ -126,7 +126,7 @@ export const OnePager: React.FC = () => {
                 <div className="bg-slate-900 text-white rounded-xl p-8 print:bg-slate-100 print:text-black print:border-2 print:border-black">
                     <div className="flex justify-between items-baseline mb-6">
                         <h2 className="text-xl font-bold">{t('onepager.offer.title')}</h2>
-                        <span className="font-mono text-blue-400 print:text-blue-700 font-bold">{t('onepager.offer.date')}</span>
+                        <span className="font-mono text-accent-400 print:text-accent-700 font-bold">{t('onepager.offer.date')}</span>
                     </div>
 
                     <div className="grid grid-cols-2 gap-8">

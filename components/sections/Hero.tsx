@@ -59,7 +59,7 @@ export const Hero: React.FC = () => {
                             className="absolute w-12 h-12 lg:w-16 lg:h-16 bg-white rounded-full shadow-[0_0_50px_rgba(100,210,255,0.8)] z-20 flex items-center justify-center"
                         >
                             <div className="absolute inset-0 bg-accent blur-md rounded-full opacity-50" />
-                            <div className="relative w-full h-full bg-gradient-to-br from-white via-blue-100 to-accent rounded-full" />
+                            <div className="relative w-full h-full bg-gradient-to-br from-white via-accent/10 to-accent rounded-full" />
                         </motion.div>
 
                         {/* 2. ELECTRON ORBITS (6 distinct orbits) */}
