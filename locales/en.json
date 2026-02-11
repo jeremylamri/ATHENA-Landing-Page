@@ -5,7 +5,13 @@
         "subtitle_strong": "The initiative redefining training engineering standards for the coming decade.",
         "subtitle": "ATHENA equips L&D departments with an unprecedentedly powerful tool to redefine training standards and augment instructional design through science and technology.",
         "cta_talk": "Request a meeting",
-        "cta_download": "Download One-Pager"
+        "cta_download": "Download One-Pager",
+        "visual": {
+            "facets": "Facets",
+            "factors": "Factors",
+            "modalities": "Modalities",
+            "levels": "Levels"
+        }
     },
     "nav": {
         "problem": "Problem",
@@ -208,5 +214,94 @@
             "generic": "An error occurred during sending. Please try again.",
             "network": "Unable to contact server. Check your connection."
         }
+    },
+    "onepager": {
+        "back_home": "Back to Home",
+        "print_save": "Print / Save",
+        "header": {
+            "subtitle": "Augmented Training Engineering",
+            "company": "TOMORROW THEORY",
+            "project": "PROJECT ATHENA",
+            "version": "VERSION 2.4"
+        },
+        "problem": {
+            "title": "THE PROBLEM",
+            "text": "Traditional training engineering relies on intuition and manual processes that struggle to keep up with skills acceleration. The gap between field needs and training response is growing.",
+            "quote": "\"We cannot solve our problems with the same thinking we used when we created them.\""
+        },
+        "prop": {
+            "title": "VALUE PROPOSITION",
+            "text": "ATHENA is a composite artificial intelligence that structures, accelerates, and objectifies pedagogical design. It enables the shift from artisanal to precision engineering.",
+            "list": {
+                "precision": "Surgical precision",
+                "context": "Native contextualization",
+                "tactic": "Tactical diversity",
+                "levels": "Fine granularity"
+            }
+        },
+        "ecosystem": {
+            "title": "THE ATHENA ECOSYSTEM",
+            "skills": {
+                "title": "ATHENA SKILLS",
+                "desc": "Atomic breakdown of skills into cognitive and behavioral micro-gestures for perfect targeting."
+            },
+            "profile": {
+                "title": "ATHENA PROFILE",
+                "desc": "Multidimensional analysis (17 factors) of the target population to adapt pedagogical design."
+            },
+            "learn": {
+                "title": "ATHENA LEARN",
+                "desc": "Multimodal recommendation engine drawing from 220+ formats to build hybrid paths."
+            }
+        },
+        "offer": {
+            "title": "V2 CONSORTIUM OFFER",
+            "date": "APRIL 2026",
+            "offer_col": {
+                "title": "THE OFFER",
+                "contribution": "Contribution",
+                "duration": "Duration",
+                "duration_val": "12 Months",
+                "consortium": "Consortium",
+                "consortium_val": "6 Partners"
+            },
+            "deliverables_col": {
+                "title": "DELIVERABLES",
+                "text": "Early access to ATHENA V2 platform. Full intellectual property transfer (code, models). Methodological support and dedicated task force."
+            }
+        },
+        "footer": {
+            "desc": "Confidential Document - Do not distribute without authorization."
+        }
+    },
+    "legal": {
+        "back_home": "Back to Home",
+        "title": "Legal Notice",
+        "intro": "In accordance with the provisions of Law No. 2004-575 of June 21, 2004 for confidence in the digital economy, users of the ATHENA site are informed of the identity of the various parties involved in its creation and monitoring.",
+        "sections": {
+            "edition": {
+                "title": "Site Edition",
+                "text": "This site is edited by <strong>TOMORROW THEORY</strong>, SAS with a capital of 1000 euros, registered with the Paris RCS."
+            },
+            "hosting": {
+                "title": "Hosting",
+                "text": "The site is hosted by Vercel Inc., located at 340 S Lemon Ave #4133 Walnut, CA 91789, USA."
+            },
+            "director": {
+                "title": "Publication Director",
+                "text": "Jérémy Lamri."
+            },
+            "contact": {
+                "title": "Contact Us",
+                "phone": "By phone: +33 1 00 00 00 00",
+                "email": "By email: <a href=\"mailto:contact@tomorrowtheory.com\" class=\"text-accent hover:underline\">contact@tomorrowtheory.com</a>",
+                "mail": "By mail: 123 Avenue des Champs-Élysées, 75008 Paris"
+            },
+            "privacy": {
+                "title": "Personal Data",
+                "text": "The processing of your personal data is governed by our Privacy Charter, in accordance with the GDPR."
+            }
+        },
+        "footer": "All rights reserved - Tomorrow Theory"
     }
 }

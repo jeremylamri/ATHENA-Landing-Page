@@ -12,6 +12,13 @@ export const OnePager: React.FC = () => {
         window.print();
     };
 
+    React.useEffect(() => {
+        // Auto-trigger print when the component mounts (implying a download intention)
+        setTimeout(() => {
+            window.print();
+        }, 1000);
+    }, []);
+
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans p-0 md:p-8">
             {/* Print Controls - Hidden when printing */}

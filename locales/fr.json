@@ -5,7 +5,13 @@
         "subtitle_strong": "L'initiative qui redéfinit les standards de l'ingénierie de formation pour la décennie à venir.",
         "subtitle": "ATHENA dote les directions L&D d'un outil d'une puissance inédite pour redéfinir les standards de la formation, et augmenter l'ingénierie pédagogique par la science et la technologie.",
         "cta_talk": "Demander un échange",
-        "cta_download": "Télécharger le one-pager"
+        "cta_download": "Télécharger le one-pager",
+        "visual": {
+            "facets": "Facettes",
+            "factors": "Facteurs",
+            "modalities": "Modalités",
+            "levels": "Niveaux"
+        }
     },
     "nav": {
         "problem": "Problème",
@@ -208,5 +214,94 @@
             "generic": "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
             "network": "Impossible de contacter le serveur. Vérifiez votre connexion."
         }
+    },
+    "onepager": {
+        "back_home": "Retour à l'accueil",
+        "print_save": "Imprimer / Sauvegarder",
+        "header": {
+            "subtitle": "Ingénierie de Formation Augmentée",
+            "company": "TOMORROW THEORY",
+            "project": "PROJET ATHENA",
+            "version": "VERSION 2.4"
+        },
+        "problem": {
+            "title": "LE PROBLÈME",
+            "text": "L'ingénierie de formation traditionnelle repose sur l'intuition et des processus manuels qui peinent à suivre l'accélération des compétences. Le décalage entre le besoin terrain et la réponse formation s'accroît.",
+            "quote": "\"On ne résout pas les problèmes avec les modes de pensée qui les ont engendrés.\""
+        },
+        "prop": {
+            "title": "LA PROPOSITION DE VALEUR",
+            "text": "ATHENA est une intelligence artificielle composite qui structure, accélère et objective la conception pédagogique. Elle permet de passer d'une ingénierie artisanale à une ingénierie de précision.",
+            "list": {
+                "precision": "Précision chirurgicale",
+                "context": "Contextualisation native",
+                "tactic": "Diversité tactique",
+                "levels": "Granularité fine"
+            }
+        },
+        "ecosystem": {
+            "title": "L'ÉCOSYSTÈME ATHENA",
+            "skills": {
+                "title": "ATHENA SKILLS",
+                "desc": "Découpage atomique des compétences en micro-gestes cognitifs et comportementaux pour un ciblage parfait."
+            },
+            "profile": {
+                "title": "ATHENA PROFILE",
+                "desc": "Analyse multidimensionnelle (17 facteurs) de la population cible pour adapter le design pédagogique."
+            },
+            "learn": {
+                "title": "ATHENA LEARN",
+                "desc": "Moteur de recommandation multimodal puiant dans 220+ formats pour construire des parcours hybrides."
+            }
+        },
+        "offer": {
+            "title": "OFFRE CONSORTIUM V2",
+            "date": "AVRIL 2026",
+            "offer_col": {
+                "title": "L'OFFRE",
+                "contribution": "Contribution",
+                "duration": "Durée",
+                "duration_val": "12 Mois",
+                "consortium": "Consortium",
+                "consortium_val": "6 Partenaires"
+            },
+            "deliverables_col": {
+                "title": "LIVRABLES",
+                "text": "Accès anticipé à la plateforme ATHENA V2. Transfert de propriété intellectuelle complet (code, modèles). Accompagnement méthodologique et task-force dédiée."
+            }
+        },
+        "footer": {
+            "desc": "Document confidentiel - Ne pas diffuser sans autorisation."
+        }
+    },
+    "legal": {
+        "back_home": "Retour à l'accueil",
+        "title": "Mentions Légales",
+        "intro": "Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site ATHENA l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.",
+        "sections": {
+            "edition": {
+                "title": "Édition du site",
+                "text": "Le présent site est édité par la société <strong>TOMORROW THEORY</strong>, SAS au capital de 1000 euros, immatriculée au RCS de Paris."
+            },
+            "hosting": {
+                "title": "Hébergement",
+                "text": "Le site est hébergé par Vercel Inc., situé 340 S Lemon Ave #4133 Walnut, CA 91789, États-Unis."
+            },
+            "director": {
+                "title": "Directeur de publication",
+                "text": "Jérémy Lamri."
+            },
+            "contact": {
+                "title": "Nous contacter",
+                "phone": "Par téléphone : +33 1 00 00 00 00",
+                "email": "Par email : <a href=\"mailto:contact@tomorrowtheory.com\" class=\"text-accent hover:underline\">contact@tomorrowtheory.com</a>",
+                "mail": "Par courrier : 123 Avenue des Champs-Élysées, 75008 Paris"
+            },
+            "privacy": {
+                "title": "Données personnelles",
+                "text": "Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie privée, conformément au RGPD."
+            }
+        },
+        "footer": "Tous droits réservés - Tomorrow Theory"
     }
 }

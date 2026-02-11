@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled || mobileMenuOpen ? 'glass-panel border-b border-white/5 py-4' : 'bg-transparent py-6'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled || mobileMenuOpen ? 'bg-black/80 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-6'
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -96,8 +96,8 @@ export const Navbar: React.FC = () => {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-sm transition-colors cursor-pointer ${activeSection === link.href
-                    ? 'text-accent font-medium'
-                    : 'text-white/70 hover:text-white'
+                  ? 'text-accent font-medium'
+                  : 'text-white/70 hover:text-white'
                   }`}
               >
                 {link.label}

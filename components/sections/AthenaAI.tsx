@@ -11,7 +11,7 @@ export const AthenaAI: React.FC = () => {
                     <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
                         {t('ai.badge')}
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-accent leading-tight">
                         {t('ai.title')}
                     </h2>
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">

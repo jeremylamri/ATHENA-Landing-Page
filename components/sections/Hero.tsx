@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export const Hero: React.FC = () => {
     const { t } = useTranslation();
     return (
-        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 pb-12 lg:pt-20 overflow-hidden">
+        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 pb-12 lg:pt-20 overflow-hidden bg-black">
             <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
                 {/* Text Content */}
@@ -145,7 +145,7 @@ export const Hero: React.FC = () => {
                             className="absolute -top-10 -left-20 glass-panel px-5 py-3 rounded-xl border-l-2 border-accent backdrop-blur-md z-30"
                         >
                             <div className="text-2xl font-bold text-white leading-none">60</div>
-                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1">Facettes</div>
+                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1">{t('hero.visual.facets')}</div>
                         </motion.div>
 
                         <motion.div
@@ -155,7 +155,7 @@ export const Hero: React.FC = () => {
                             className="absolute top-10 -right-24 glass-panel px-5 py-3 rounded-xl border-r-2 border-accent backdrop-blur-md z-30"
                         >
                             <div className="text-2xl font-bold text-white leading-none text-right">17</div>
-                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1 text-right">Facteurs</div>
+                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1 text-right">{t('hero.visual.factors')}</div>
                         </motion.div>
 
                         <motion.div
@@ -165,7 +165,7 @@ export const Hero: React.FC = () => {
                             className="absolute bottom-0 -left-12 glass-panel px-5 py-3 rounded-xl border-b-2 border-accent backdrop-blur-md z-30"
                         >
                             <div className="text-2xl font-bold text-white leading-none">220+</div>
-                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1">Modalités</div>
+                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1">{t('hero.visual.modalities')}</div>
                         </motion.div>
 
                         <motion.div
@@ -175,7 +175,7 @@ export const Hero: React.FC = () => {
                             className="absolute -bottom-12 right-0 glass-panel px-5 py-3 rounded-xl border-b-2 border-accent backdrop-blur-md z-30"
                         >
                             <div className="text-2xl font-bold text-white leading-none text-right">4</div>
-                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1 text-right">Niveaux</div>
+                            <div className="text-[10px] uppercase tracking-widest text-white/50 mt-1 text-right">{t('hero.visual.levels')}</div>
                         </motion.div>
 
                     </div>

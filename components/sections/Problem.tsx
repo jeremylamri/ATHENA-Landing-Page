@@ -13,7 +13,7 @@ export const Problem: React.FC = () => {
           <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
             {t('problem.badge')}
           </span>
-          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-accent leading-tight">
             {t('problem.title')}
           </h2>
           <p className="text-white/60 text-base md:text-lg">

@@ -23,7 +23,7 @@ export const Model: React.FC = () => {
             <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
               {t('model.badge')}
             </span>
-            <h2 className="text-3xl md:text-5xl font-semibold mb-8 text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold mb-8 text-accent leading-tight">
               {t('model.title')}
             </h2>
             <div className="prose prose-invert max-w-none text-white/70 text-base md:text-lg leading-relaxed mb-8">
