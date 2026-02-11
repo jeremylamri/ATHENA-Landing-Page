@@ -12,6 +12,7 @@ import { Contact } from './components/sections/Contact';
 import { About } from './components/sections/About';
 import { Footer } from './components/layout/Footer';
 import { OnePager } from './components/documents/OnePager';
+import { LegalNotice } from './components/documents/LegalNotice';
 
 function App() {
   const [view, setView] = useState('landing');
@@ -25,6 +26,10 @@ function App() {
 
   if (view === 'one-pager') {
     return <OnePager />;
+  }
+
+  if (view === 'legal') {
+    return <LegalNotice onBack={() => setView('landing')} />;
   }
 
   return (
@@ -44,7 +49,7 @@ function App() {
         <Contact />
       </main>
 
-      <Footer />
+      <Footer onLegalClick={() => setView('legal')} />
     </div>
   );
 }
