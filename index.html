@@ -1,105 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-  <head>
+<!doctype html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATHENA | Intelligence de la Compétence</title>
-    <meta name="description" content="L'IA adossée à un modèle explicite de compétence.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #000000;
-        color: #ffffff;
-        overflow-x: hidden;
-      }
-      
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
-      
-      .glass-panel {
-        background: rgba(28, 28, 30, 0.55);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      
-      .text-glow {
-        text-shadow: 0 0 20px rgba(100, 210, 255, 0.3);
-      }
-
-      /* Subtle gradient background animation */
-      .ambient-glow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        background: 
-          radial-gradient(circle at 15% 50%, rgba(100, 210, 255, 0.08), transparent 25%),
-          radial-gradient(circle at 85% 30%, rgba(60, 60, 100, 0.15), transparent 25%);
-        pointer-events: none;
-      }
-
-      /* PRINT STYLES */
-      @media print {
-        @page { margin: 0; }
-        body { 
-          background-color: white !important; 
-          color: black !important; 
-          -webkit-print-color-adjust: exact !important;
-          print-color-adjust: exact !important;
-        }
-        .ambient-glow, .glass-panel {
-          background: none !important;
-          backdrop-filter: none !important;
-          border: none !important;
-        }
-      }
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: '#000000',
-              surface: '#1C1C1E',
-              accent: '#64D2FF', // Teal Scientifique
-              'accent-hover': '#4BB0D9',
-              glass: 'rgba(28, 28, 30, 0.55)',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
+    <title>ATHENA - Intelligence de la Compétence</title>
 </head>
-  <body>
-    <div class="ambient-glow"></div>
+
+<body>
     <div id="root"></div>
-  </body>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
