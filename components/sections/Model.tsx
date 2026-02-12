@@ -1,17 +1,17 @@
 import React from 'react';
 import { GlassCard } from '../ui/GlassCard';
-import { Atom } from 'lucide-react';
+import { Atom, Brain, BookOpen, Target, Heart, Activity } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
 
 export const Model: React.FC = () => {
   const { t } = useTranslation();
 
   const dimensions = [
-    { title: t('model.dimensions.cognition.title'), desc: t('model.dimensions.cognition.desc') },
-    { title: t('model.dimensions.knowledge.title'), desc: t('model.dimensions.knowledge.desc') },
-    { title: t('model.dimensions.conation.title'), desc: t('model.dimensions.conation.desc') },
-    { title: t('model.dimensions.emotion.title'), desc: t('model.dimensions.emotion.desc') },
-    { title: t('model.dimensions.sensorimotor.title'), desc: t('model.dimensions.sensorimotor.desc') }
+    { title: t('model.dimensions.cognition.title'), desc: t('model.dimensions.cognition.desc'), icon: Brain },
+    { title: t('model.dimensions.knowledge.title'), desc: t('model.dimensions.knowledge.desc'), icon: BookOpen },
+    { title: t('model.dimensions.conation.title'), desc: t('model.dimensions.conation.desc'), icon: Target },
+    { title: t('model.dimensions.emotion.title'), desc: t('model.dimensions.emotion.desc'), icon: Heart },
+    { title: t('model.dimensions.sensorimotor.title'), desc: t('model.dimensions.sensorimotor.desc'), icon: Activity }
   ];
 
   return (
@@ -44,7 +44,7 @@ export const Model: React.FC = () => {
                 <Atom size={64} className="text-accent" />
               </div>
               <h3 className="text-white font-medium mb-3 relative z-10 print:text-black">{t('model.analogy.title')}</h3>
-              <p className="text-sm text-white/60 leading-relaxed relative z-10 print:text-slate-600">
+              <p className="text-sm text-white/60 leading-relaxed relative z-10 print:text-slate-600 whitespace-pre-line">
                 <Trans i18nKey="model.analogy.text" />
               </p>
             </div>
@@ -53,9 +53,16 @@ export const Model: React.FC = () => {
           <div className="flex-1 w-full mt-8 lg:mt-0">
             <div className="grid gap-3">
               {dimensions.map((dim, index) => (
-                <GlassCard key={index} className="flex flex-col justify-center py-6 px-6 md:px-8 hover:bg-white/[0.02] transition-colors print:bg-white print:border print:border-slate-200 print:shadow-none print:hover:bg-none" delay={index * 0.1}>
-                  <h4 className="text-lg font-medium text-white mb-1 print:text-black">{dim.title}</h4>
-                  <p className="text-sm text-white/50 print:text-slate-500">{dim.desc}</p>
+                <GlassCard key={index} className="flex flex-col justify-center py-5 px-6 hover:bg-white/[0.02] transition-colors print:bg-white print:border print:border-slate-200 print:shadow-none print:hover:bg-none" delay={index * 0.1}>
+                  <div className="flex items-start gap-4">
+                    <div className="p-2.5 rounded-xl bg-accent/10 text-accent border border-accent/20 shrink-0 print:border-slate-200 print:bg-slate-50 print:text-slate-800">
+                      <dim.icon size={20} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-1.5 print:text-black">{dim.title}</h4>
+                      <p className="text-sm text-white/50 print:text-slate-600 leading-relaxed">{dim.desc}</p>
+                    </div>
+                  </div>
                 </GlassCard>
               ))}
             </div>

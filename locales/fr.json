@@ -34,9 +34,9 @@
     },
     "model": {
         "badge": "Le Modèle",
-        "title": "Une modélisation systémique.",
-        "desc_1": "ATHENA ne se contente pas d'automatiser des tâches. Elle structure la pensée pédagogique selon un modèle propriétaire éprouvé.",
-        "desc_2": "Chaque décision est pesée, argumentée et traçable.",
+        "title": "Une modélisation systémique de la compétence.",
+        "desc_1": "La compétence n'est pas un stock de savoirs stable. C'est une dynamique de mobilisation, de coordination et de régulation de ressources internes face à une situation donnée.",
+        "desc_2": "L'opérationnalisation via 60 facettes et 4 niveaux de maîtrise permet de passer d'une intention de formation généraliste à une stratégie d'ingénierie de précision.",
         "dimensions": {
             "cognition": {
                 "title": "Cognition",
@@ -60,8 +60,8 @@
             }
         },
         "analogy": {
-            "title": "La chimie de la compétence",
-            "text": "Tout comme la chimie décompose la matière en atomes, ATHENA décompose la compétence en ses éléments fondamentaux pour mieux la reconstruire."
+            "title": "La Chimie de la Compétence",
+            "text": "Une compétence métier (ex: \"Leadership\") n'est pas un bloc monolithique. C'est un assemblage complexe, comparable à une molécule.\n\nATHENA agit comme la Table Périodique des RH : nous avons isolé les 60 atomes fondamentaux (les facettes) qui composent toute intelligence humaine.\n\nAu lieu de gérer des \"étiquettes\" floues, vous manipulez désormais la formule chimique exacte de vos métiers. Vous ne devinez plus : vous recomposez la performance atome par atome."
         }
     },
     "nav": {
