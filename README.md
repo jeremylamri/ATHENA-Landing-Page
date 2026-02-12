@@ -11,8 +11,10 @@ View your app in AI Studio: <https://ai.studio/apps/drive/16qBY5-5V5HfWUT-_CBkaW
 ## Features
 
 - **Architecture:** React 19, Vite, TypeScript, Tailwind CSS v4.
-- **Routing:** SPA navigation with `react-router-dom` (Home, OnePager, Legal).
+- **Backend:** Node.js/Express server (handles PDF generation and Slack API).
+- **Routing:** SPA navigation with `react-router-dom` (Home, Legal).
 - **Internationalization (i18n):** Full FR/EN support with `i18next`.
+- **Features:** Direct PDF Download (`html2pdf.js`), Slack Integration for Contact Form.
 - **UI/UX:** Premium animations (`framer-motion`), glassmorphism, and responsive design.
 
 ## Run Locally
@@ -21,10 +23,11 @@ View your app in AI Studio: <https://ai.studio/apps/drive/16qBY5-5V5HfWUT-_CBkaW
 
 1. Install dependencies:
    `npm install`
-2. Run the dev server:
+2. Create `.env` file with `SLACK_WEBHOOK_URL=your_url`.
+3. Run the development server (Frontend + Backend proxy):
    `npm run dev`
-3. Build for production:
-   `npm run build`
+4. Build and start production server:
+   `npm run build && npm run start`
 
 ## Localization
 

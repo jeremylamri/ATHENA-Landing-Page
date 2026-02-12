@@ -5,10 +5,13 @@ import { Button } from '../ui/Button';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
+import { usePrintMode } from '../PrintContext';
+
 emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const { isPrintMode } = usePrintMode();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -57,45 +60,45 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 relative scroll-mt-24 md:scroll-mt-32">
+    <section id="contact" className={`py-16 md:py-24 relative scroll-mt-24 md:scroll-mt-32 ${isPrintMode ? 'bg-white text-black' : ''} print:bg-white print:text-black`}>
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className={`absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] pointer-events-none ${isPrintMode ? 'hidden' : ''} print:hidden`} />
+      <div className={`absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] pointer-events-none ${isPrintMode ? 'hidden' : ''} print:hidden`} />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 ${isPrintMode ? 'items-center text-center max-w-2xl mx-auto block' : ''} print:items-center print:text-center print:max-w-2xl print:mx-auto print:block`}>
           {/* Left Column: Contact Info */}
-          <div>
-            <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
+          <div className={isPrintMode ? 'w-full' : ''}>
+            <span className={`text-accent font-medium tracking-widest text-xs uppercase block mb-3 ${isPrintMode ? 'text-accent-700' : ''} print:text-accent-700`}>
               {t('contact.badge')}
             </span>
-            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
+            <h2 className={`text-3xl md:text-5xl font-semibold mb-6 leading-tight ${isPrintMode ? 'text-black' : 'text-white'} print:text-black`}>
               {t('contact.title')}
             </h2>
-            <p className="text-white/60 text-base md:text-lg mb-10 leading-relaxed">
+            <p className={`text-base md:text-lg mb-10 leading-relaxed ${isPrintMode ? 'text-slate-700' : 'text-white/60'} print:text-slate-700`}>
               {t('contact.description')}
             </p>
 
-            <div className="space-y-6">
-              <GlassCard className="flex items-center gap-4 group p-5 hover:bg-white/5 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+            <div className={`space-y-6 ${isPrintMode ? 'grid grid-cols-1 md:grid-cols-2 gap-4 space-y-0 text-left' : ''} print:grid print:grid-cols-1 print:md:grid-cols-2 print:gap-4 print:space-y-0 print:text-left`}>
+              <GlassCard className={`flex items-center gap-4 group p-5 transition-colors ${isPrintMode ? 'bg-slate-50 border-slate-200 shadow-none' : 'hover:bg-white/5'} print:bg-slate-50 print:border-slate-200 print:shadow-none`}>
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-transform ${isPrintMode ? 'bg-slate-200 text-accent-700' : 'bg-accent/10 text-accent group-hover:scale-110'} print:bg-slate-200 print:text-accent-700`}>
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">{t('contact.info.email')}</h4>
-                  <a href="mailto:contact@tomorrowtheory.com" className="text-white/60 hover:text-accent transition-colors text-lg">
-                    contact@tomorrowtheory.com
+                  <h4 className={`font-medium mb-1 ${isPrintMode ? 'text-black' : 'text-white'} print:text-black`}>{t('contact.info.email')}</h4>
+                  <a href="mailto:general@tomorrowtheory.com" className={`text-lg transition-colors ${isPrintMode ? 'text-slate-700 hover:text-accent-700' : 'text-white/60 hover:text-accent'} print:text-slate-700`}>
+                    general@tomorrowtheory.com
                   </a>
                 </div>
               </GlassCard>
 
-              <GlassCard className="flex items-center gap-4 group p-5 hover:bg-white/5 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
+              <GlassCard className={`flex items-center gap-4 group p-5 transition-colors ${isPrintMode ? 'bg-slate-50 border-slate-200 shadow-none' : 'hover:bg-white/5'} print:bg-slate-50 print:border-slate-200 print:shadow-none`}>
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-transform ${isPrintMode ? 'bg-slate-200 text-accent-700' : 'bg-accent/10 text-accent group-hover:scale-110'} print:bg-slate-200 print:text-accent-700`}>
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">{t('contact.info.hq')}</h4>
-                  <p className="text-white/60 text-lg">
+                  <h4 className={`font-medium mb-1 ${isPrintMode ? 'text-black' : 'text-white'} print:text-black`}>{t('contact.info.hq')}</h4>
+                  <p className={`text-lg ${isPrintMode ? 'text-slate-700' : 'text-white/60'} print:text-slate-700`}>
                     Paris, France
                   </p>
                 </div>
@@ -104,7 +107,7 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Form */}
-          <GlassCard className="border-white/10 p-6 md:p-8">
+          <GlassCard className={`border-white/10 p-6 md:p-8 ${isPrintMode ? 'hidden' : ''} print:hidden`}>
             {submitStatus === 'success' ? (
               <div className="flex flex-col items-center justify-center h-full text-center py-12 animate-fade-in">
                 <div className="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mb-6">

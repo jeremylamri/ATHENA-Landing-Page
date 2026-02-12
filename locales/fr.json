@@ -345,7 +345,7 @@
             "contact": {
                 "title": "Nous contacter",
                 "phone": "Par téléphone : +33 1 00 00 00 00",
-                "email": "Par email : <a href=\"mailto:contact@tomorrowtheory.com\" class=\"text-accent hover:underline\">contact@tomorrowtheory.com</a>",
+                "email": "Par email : <a href=\"mailto:general@tomorrowtheory.com\" class=\"text-accent hover:underline\">general@tomorrowtheory.com</a>",
                 "mail": "Par courrier : 123 Avenue des Champs-Élysées, 75008 Paris"
             },
             "privacy": {

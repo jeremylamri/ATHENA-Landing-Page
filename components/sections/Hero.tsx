@@ -4,10 +4,18 @@ import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useTranslation } from 'react-i18next';
 
-export const Hero: React.FC = () => {
+import { usePrintMode } from '../PrintContext';
+
+interface HeroProps {
+    onDownloadPdf?: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onDownloadPdf }) => {
     const { t } = useTranslation();
+    const { isPrintMode } = usePrintMode();
+
     return (
-        <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 pb-12 lg:pt-20 overflow-hidden bg-black print:bg-white print:text-black print:h-auto print:min-h-0 print:py-10">
+        <section className={`relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 pb-12 lg:pt-20 overflow-hidden ${isPrintMode ? 'bg-white text-black' : 'bg-black'} print:bg-white print:text-black print:h-auto print:min-h-0 print:py-10`}>
             <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
                 {/* Text Content */}
@@ -18,16 +26,16 @@ export const Hero: React.FC = () => {
                         transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <span className="inline-block px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide text-accent bg-accent/10 rounded-full border border-accent/20 print:border-accent print:text-accent-700">
+                            <span className={`inline-block px-3 py-1 text-[10px] md:text-xs font-medium tracking-wide text-accent bg-accent/10 rounded-full border border-accent/20 ${isPrintMode ? 'border-accent text-accent-700' : ''} print:border-accent print:text-accent-700`}>
                                 {t('hero.badge')}
                             </span>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6 text-white print:text-black">
+                        <h1 className={`text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6 ${isPrintMode ? 'text-black' : 'text-white'} print:text-black`}>
                             {t('hero.title')}
                         </h1>
-                        <p className="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-2xl print:text-slate-700">
-                            <strong className="text-white font-medium block mb-2 print:text-slate-900">{t('hero.subtitle_strong')}</strong>
+                        <p className={`text-base md:text-lg leading-relaxed mb-8 max-w-2xl ${isPrintMode ? 'text-slate-700' : 'text-white/70'} print:text-slate-700`}>
+                            <strong className={`${isPrintMode ? 'text-slate-900' : 'text-white'} font-medium block mb-2 print:text-slate-900`}>{t('hero.subtitle_strong')}</strong>
                             {t('hero.subtitle')}
                         </p>
 
@@ -36,10 +44,17 @@ export const Hero: React.FC = () => {
                                 {t('hero.cta_talk')}
                                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <Button variant="secondary" onClick={() => window.open('/one-pager', '_blank')} className="w-full sm:w-auto">
-                                <Download className="mr-2 w-4 h-4" />
-                                {t('hero.cta_download')}
-                            </Button>
+                            {onDownloadPdf ? (
+                                <Button variant="secondary" onClick={onDownloadPdf} className="w-full sm:w-auto">
+                                    <Download className="mr-2 w-4 h-4" />
+                                    {t('hero.cta_download')}
+                                </Button>
+                            ) : (
+                                <Button variant="secondary" onClick={() => window.open('/one-pager', '_blank')} className="w-full sm:w-auto">
+                                    <Download className="mr-2 w-4 h-4" />
+                                    {t('hero.cta_download')}
+                                </Button>
+                            )}
                         </div>
                     </motion.div>
                 </div>

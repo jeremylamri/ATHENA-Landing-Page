@@ -2,9 +2,11 @@ import React from 'react';
 import { GlassCard } from '../ui/GlassCard';
 import { ArrowUpRight } from 'lucide-react';
 import { useTranslation, Trans } from 'react-i18next';
+import { usePrintMode } from '../PrintContext';
 
 export const SocialProof: React.FC = () => {
   const { t } = useTranslation();
+  const { isPrintMode } = usePrintMode();
 
   const publications = [
     {
@@ -34,19 +36,19 @@ export const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section id="preuves" className="py-16 md:py-24 border-y border-white/5 bg-[#050505] scroll-mt-24 md:scroll-mt-32 print:bg-white print:text-black print:border-none">
+    <section id="preuves" className={`py-16 md:py-24 border-y border-white/5 scroll-mt-24 md:scroll-mt-32 ${isPrintMode ? 'bg-white text-black border-none' : 'bg-[#050505]'} print:bg-white print:text-black print:border-none`}>
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="mb-12 md:mb-16">
-          <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3 print:text-accent-700">
+          <span className={`text-accent font-medium tracking-widest text-xs uppercase block mb-3 ${isPrintMode ? 'text-accent-700' : ''} print:text-accent-700`}>
             {t('social_proof.badge')}
           </span>
-          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight print:text-black">
+          <h2 className={`text-3xl md:text-5xl font-semibold mb-6 leading-tight ${isPrintMode ? 'text-black' : 'text-white'} print:text-black`}>
             {t('social_proof.title')}
           </h2>
-          <p className="text-white/60 text-base md:text-lg mb-6 print:text-slate-700">
+          <p className={`text-base md:text-lg mb-6 ${isPrintMode ? 'text-slate-700' : 'text-white/60'} print:text-slate-700`}>
             <Trans i18nKey="social_proof.desc_1" />
           </p>
-          <p className="text-white/60 text-base md:text-lg print:text-slate-700">
+          <p className={`text-base md:text-lg ${isPrintMode ? 'text-slate-700' : 'text-white/60'} print:text-slate-700`}>
             <Trans i18nKey="social_proof.desc_2" />
           </p>
         </div>
@@ -54,12 +56,12 @@ export const SocialProof: React.FC = () => {
         {/* Logos Section - Changed to Grid for full width distribution */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16">
           {partners.map((partner, i) => (
-            <div key={i} className="group relative w-full h-32 md:h-40 flex items-center justify-center p-8 bg-white border border-white/10 rounded-xl transition-all duration-500 hover:border-accent/40 hover:scale-[1.02] print:bg-white print:border-slate-200 overflow-hidden">
+            <div key={i} className={`group relative w-full h-28 md:h-[136px] flex items-center justify-center p-6 bg-white border rounded-xl transition-all duration-500 hover:border-accent/40 hover:scale-[1.02] overflow-hidden ${isPrintMode ? 'border-slate-200' : 'border-white/10'} print:bg-white print:border-slate-200`}>
               <img
                 src={partner.logo}
                 alt={partner.name}
                 style={{ transform: `scale(${partner.scale})` }}
-                className="w-full h-full object-contain transition-all duration-500 opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 print:filter-none print:opacity-100"
+                className={`w-full h-full object-contain transition-all duration-500 grayscale group-hover:opacity-100 group-hover:grayscale-0 ${isPrintMode ? 'filter-none opacity-100' : 'opacity-60'} print:filter-none print:opacity-100`}
               />
             </div>
           ))}
