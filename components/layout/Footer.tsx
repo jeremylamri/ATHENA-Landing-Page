@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onLegalClick }) => {
   const { t } = useTranslation();
   return (
-    <footer className="py-12 border-t border-white/10 bg-black text-sm">
+    <footer className="py-8 border-t border-white/10 bg-black text-sm">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-white/50 flex flex-col md:flex-row gap-4 items-center">
           <span>&copy; {new Date().getFullYear()} Tomorrow Theory. {t('footer.rights')}</span>
@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onLegalClick }) => {
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
           <a href="https://www.tomorrowtheory.com" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity">
-            <img src="/logo-footer.png" alt="Tomorrow Theory" className="h-28 w-auto" />
+            <img src="/logo-footer.png" alt="Tomorrow Theory" className="h-20 w-auto" />
           </a>
         </div>
       </div>

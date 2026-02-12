@@ -24,8 +24,10 @@ export const OnePager: React.FC = () => {
     };
 
     useEffect(() => {
-        // Optional: Auto-trigger print or just hint
-        // window.print();
+        // Auto-trigger print when opened
+        setTimeout(() => {
+            window.print();
+        }, 500);
     }, []);
 
     return (
