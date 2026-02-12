@@ -6,24 +6,24 @@ export const LanguageSwitcher: React.FC = () => {
     const { i18n } = useTranslation();
 
     return (
-        <div className="flex items-center p-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+        <div className="flex items-center p-1 rounded-full bg-black/40 border border-white/10 backdrop-blur-md">
             {['fr', 'en'].map((lang) => {
                 const isActive = i18n.language === lang;
                 return (
                     <button
                         key={lang}
                         onClick={() => i18n.changeLanguage(lang)}
-                        className={`relative px-3 py-1.5 text-xs font-medium transition-colors rounded-full ${isActive ? 'text-accent' : 'text-white/50 hover:text-white/80'
+                        className={`relative px-4 py-1.5 text-xs font-bold transition-colors rounded-full z-10 ${isActive ? 'text-white' : 'text-white/40 hover:text-white/70'
                             }`}
                     >
                         {isActive && (
                             <motion.div
                                 layoutId="active-lang"
-                                className="absolute inset-0 bg-white/10 rounded-full"
+                                className="absolute inset-0 bg-white/10 rounded-full border border-white/5 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
                                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                             />
                         )}
-                        <span className="relative z-10">{lang.toUpperCase()}</span>
+                        <span className="relative z-10 tracking-widest">{lang.toUpperCase()}</span>
                     </button>
                 );
             })}

@@ -18,7 +18,7 @@ i18n
             escapeValue: false,
         },
         detection: {
-            order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+            order: ['localStorage', 'htmlTag', 'path', 'subdomain'], // Removed 'navigator' to force FR default on first visit
             caches: ['localStorage'],
         },
     });
