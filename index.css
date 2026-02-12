@@ -100,7 +100,7 @@
 /* Print Styles */
 @media print {
     @page {
-        margin: 0;
+        margin: 1.5cm;
         size: auto;
     }
 
@@ -108,21 +108,99 @@
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
         background-color: white !important;
+        color: black !important;
     }
 
-    /* Ensure background colors are printed */
+    /* Force all universal elements to clean print styles */
     * {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
+        color: black !important;
+        /* Force black text everywhere */
+        background-color: transparent !important;
+        /* Remove backgrounds */
+        box-shadow: none !important;
+        /* Remove shadows/glows */
+        text-shadow: none !important;
+        filter: none !important;
+        /* Remove blurs */
+        backdrop-filter: none !important;
     }
 
-    /* Hide scrollbars in print */
+    /* Exception: Allow white background for the main container if needed to cover things */
+    .print-container {
+        background-color: white !important;
+        z-index: 9999;
+    }
+
+    /* Hide scrollbars */
     ::-webkit-scrollbar {
         display: none;
     }
 
-    /* Utility to hide elements in print */
-    .no-print {
+    /* Utilities */
+    .no-print,
+    .print\:hidden {
         display: none !important;
+    }
+
+    .print\:block {
+        display: block !important;
+    }
+
+    /* Add borders to cards for structure since shadows/bg are gone */
+    .glass-panel,
+    [class*="border"],
+    .rounded-2xl,
+    .rounded-3xl,
+    .rounded-xl {
+        border: 1px solid #ccc !important;
+        border-radius: 4px !important;
+    }
+
+    /* Typography overrides for hierarchy since we lost color differentiation */
+    h1,
+    h2,
+    h3 {
+        color: black !important;
+        font-weight: 800 !important;
+    }
+
+    h4,
+    h5,
+    h6 {
+        color: black !important;
+        font-weight: 700 !important;
+    }
+
+    p,
+    li,
+    span,
+    div {
+        color: #1a1a1a !important;
+    }
+
+    /* Fix icons */
+    svg {
+        stroke: black !important;
+        color: black !important;
+    }
+
+    /* Hide decorative blobs/gradients explicitly */
+    [class*="blur-"],
+    [class*="bg-accent/"],
+    [class*="bg-white/"] {
+        background: transparent !important;
+    }
+
+    /* Page Breaks */
+    .print\:break-after-page {
+        break-after: page;
+        page-break-after: always;
+    }
+
+    .print\:break-inside-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }

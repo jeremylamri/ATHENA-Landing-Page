@@ -8,9 +8,9 @@ interface GlassCardProps extends BaseProps {
   onClick?: () => void;
 }
 
-export const GlassCard: React.FC<GlassCardProps> = ({ 
-  children, 
-  className = '', 
+export const GlassCard: React.FC<GlassCardProps> = ({
+  children,
+  className = '',
   hoverEffect = false,
   delay = 0,
   onClick
@@ -23,7 +23,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       transition={{ duration: 0.5, delay, ease: [0.2, 0.8, 0.2, 1] }}
       whileHover={hoverEffect ? { y: -5, backgroundColor: 'rgba(255, 255, 255, 0.03)' } : {}}
       onClick={onClick}
-      className={`glass-panel rounded-2xl md:rounded-3xl p-6 md:p-8 relative overflow-hidden transition-colors duration-300 ${className}`}
+      className={`glass-panel rounded-2xl md:rounded-3xl p-6 md:p-8 relative overflow-hidden transition-colors duration-300 print:shadow-none print:transform-none ${className}`}
     >
       <div className="relative z-10">
         {children}
