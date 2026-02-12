@@ -3,7 +3,7 @@
         "badge": "ACTION-RESEARCH PROGRAM",
         "title": "Professionalize skills engineering with ATHENA",
         "subtitle_strong": "The initiative redefining training engineering standards for the coming decade.",
-        "subtitle": "ATHENA equips L&D departments with an unprecedentedly powerful tool to redefine training standards and augment instructional design through science and technology.",
+        "subtitle": "ATHENA equips L&D departments with a tool of unprecedented power to redefine training standards and augment instructional design through science and technology.",
         "cta_talk": "Request a meeting",
         "cta_download": "Download One-Pager",
         "visual": {
@@ -16,7 +16,7 @@
     "problem": {
         "badge": "The Problem",
         "title": "Training engineering is at a dead end.",
-        "description": "Faced with accelerated skills obsolescence, artisanal methods are no longer sufficient. The gap is widening between field reality and training response.",
+        "description": "Faced with accelerated skills obsolescence, artisanal methods are no longer sufficient. The gap between field reality and training response is widening.",
         "cards": {
             "granularity": {
                 "title": "Insufficient Granularity",
@@ -24,7 +24,7 @@
             },
             "content_first": {
                 "title": "Content-First Approach",
-                "desc": "Pushing existing content rather than starting from structural need analysis."
+                "desc": "Pushing existing content rather than starting from structural needs analysis."
             },
             "context": {
                 "title": "Context Disconnection",
@@ -122,7 +122,7 @@
             },
             "transparency": {
                 "title": "Decision transparency",
-                "desc": "Explicate necessary tradeoffs. By making arbitrations visible (depth vs coverage), ATHENA qualifies the dialogue between L&D and business sponsors."
+                "desc": "Make necessary tradeoffs explicit. By making arbitrations visible (depth vs coverage), ATHENA qualifies the dialogue between L&D and business sponsors."
             },
             "tactics": {
                 "title": "Tactical diversification",
@@ -132,13 +132,12 @@
                 "title": "Constitution of technical assets",
                 "desc": "Transform each project into an asset for the organization. Analyses and architectures are capitalized in a structured knowledge base, promoting continuous improvement of practices."
             }
-        },
-        "conclusion": "Towards a more explicit, cumulative, and strategic training engineering."
+        }
     },
     "social_proof": {
         "badge": "Validation & Proof",
         "title": "A scientific achievement.",
-        "desc_1": "ATHENA is not an isolated experiment, but the breaking point of a research lineage. The system crystallizes <strong class=\"text-white/80\">over 10 years of continuous R&D</strong> on human performance modeling.",
+        "desc_1": "ATHENA is not an isolated experiment, but the culmination of a research lineage. The system crystallizes <strong class=\"text-white/80\">over 10 years of continuous R&D</strong> on human performance modeling.",
         "desc_2": "To demonstrate the application in the ATHENA project field, Tomorrow Theory formed a consortium in early 2025, alongside <strong class=\"text-white/80\">Decathlon</strong>, <strong class=\"text-white/80\">Crédit Mutuel Alliance Fédérale</strong>, and <strong class=\"text-white/80\">Bouygues</strong>. This consortium greatly accelerated the work related to ATHENA.",
         "recognition": "ATHENA already benefits from academic recognition, with 3 research articles published in prestigious international academic journals. These articles total nearly 50,000 views in the research world, demonstrating strong interest in the ATHENA approach.",
         "publications": {
@@ -154,7 +153,7 @@
             "title": "For the partner organization, integration into the program provides:",
             "list": {
                 "grid": "A high-definition reading grid of strategic skills.",
-                "break": "A break with pedagogical design automatisms.",
+                "break": "A break from pedagogical design automatisms.",
                 "rationalization": "Evidence-based investment rationalization.",
                 "relevance": "Increased device relevance perceived by the field.",
                 "sharing": "Best practice sharing with experts from other partner organizations."
@@ -163,7 +162,7 @@
         "phases": {
             "framing": {
                 "title": "Framing & Alignment",
-                "desc": "Definition of experimentation perimeters and task force constitution."
+                "desc": "Definition of experimentation scopes and task force constitution."
             },
             "modeling": {
                 "title": "Modeling & Test",
@@ -221,7 +220,7 @@
         "title": "Prepare for the future of work.",
         "desc_1": "Our job is to support you in anticipating and integrating the major challenges of the future of work and HR, to allow you to better attract, develop, and retain your talents.",
         "desc_2": "Our approaches combine mastery of sciences, technologies, and influence techniques to effectively support all stages of your transformation.",
-        "desc_3": "The ATHENA project embodies this vision: sober, transparent technology serving precision pedagogy.",
+        "desc_3": "The ATHENA project embodies this vision: streamlined, transparent technology serving precision pedagogy.",
         "cards": {
             "sovereignty": {
                 "title": "Sovereignty & Independence",

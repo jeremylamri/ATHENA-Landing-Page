@@ -18,8 +18,9 @@ i18n
             escapeValue: false,
         },
         detection: {
-            order: ['localStorage', 'htmlTag', 'path', 'subdomain'], // Removed 'navigator' to force FR default on first visit
+            order: ['querystring', 'localStorage', 'htmlTag', 'path', 'subdomain'], // Added querystring for PDF generation
             caches: ['localStorage'],
+            lookupQuerystring: 'lng',
         },
     });
 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 import { usePrintMode } from '../PrintContext';
 
@@ -39,23 +40,15 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadPdf }) => {
                             {t('hero.subtitle')}
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 print:hidden">
-                            <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="group w-full sm:w-auto">
-                                {t('hero.cta_talk')}
-                                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                            {onDownloadPdf ? (
-                                <Button variant="secondary" onClick={onDownloadPdf} className="w-full sm:w-auto">
-                                    <Download className="mr-2 w-4 h-4" />
-                                    {t('hero.cta_download')}
-                                </Button>
-                            ) : (
-                                <Button variant="secondary" onClick={() => window.open('/one-pager', '_blank')} className="w-full sm:w-auto">
-                                    <Download className="mr-2 w-4 h-4" />
-                                    {t('hero.cta_download')}
-                                </Button>
-                            )}
-                        </div>
+                        <a
+                            href={i18n.language.startsWith('en') ? "/Athena_Presentation_EN.pdf" : "/Athena_Presentation_FR.pdf"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all cursor-pointer backdrop-blur-sm"
+                        >
+                            <Download size={20} className="text-white group-hover:text-accent transition-colors" />
+                            <span className="text-sm font-medium text-white">{t('hero.cta_download')}</span>
+                        </a>
                     </motion.div>
                 </div>
 

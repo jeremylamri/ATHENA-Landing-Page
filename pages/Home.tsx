@@ -11,7 +11,6 @@ import { IPRights } from '../components/sections/IPRights';
 import { Contact } from '../components/sections/Contact';
 import { About } from '../components/sections/About';
 import { Footer } from '../components/layout/Footer';
-import { OnePagerContent } from '../components/documents/OnePagerContent';
 
 interface HomeProps {
     onLegalClick: () => void;
@@ -19,23 +18,14 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ onLegalClick }) => {
 
-    const handleDownloadPdf = () => {
-        window.print();
-    };
-
     return (
         <div className="min-h-screen text-white selection:bg-accent/30 selection:text-white">
             <div className="no-print">
                 <Navbar />
             </div>
 
-            {/* Print Content - Visible ONLY when printing */}
-            <div id="pdf-content" className="hidden print:block print:w-full print:h-auto bg-white text-black">
-                <OnePagerContent isPdfMode={true} />
-            </div>
-
             <main className="no-print">
-                <Hero onDownloadPdf={handleDownloadPdf} />
+                <Hero />
                 <Problem />
                 <Model />
                 <AthenaAI />
