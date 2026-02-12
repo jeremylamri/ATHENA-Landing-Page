@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import fetch from 'node-fetch'; // Standard fetch might be available in newer Node, but using explicit import if needed, or rely on global in Node 18+
+// fetch is global in Node 18+
 
 // Load environment variables
 dotenv.config();
