@@ -40,23 +40,23 @@
         "dimensions": {
             "cognition": {
                 "title": "Cognition",
-                "desc": "Capacités d'analyse, de raisonnement, de décision et d'anticipation."
+                "desc": "Capacités d’analyse, de raisonnement, de décision et d’anticipation. Elle permet de comprendre les situations complexes, de hiérarchiser l’information utile, de construire des stratégies d’action et d’ajuster ses choix lorsque l’environnement évolue."
             },
             "knowledge": {
                 "title": "Connaissances",
-                "desc": "Savoirs déclaratifs, procéduraux et contextuels mobilisables."
+                "desc": "Savoirs déclaratifs, procéduraux et contextuels mobilisables. Elles regroupent les concepts, méthodes, règles et repères issus de l’expérience qui sécurisent l’action et permettent d’intervenir avec pertinence dans des contextes variés."
             },
             "conation": {
                 "title": "Conation",
-                "desc": "Facteurs de motivation, d'effort, de persévérance et de clairvoyance."
+                "desc": "Facteurs de motivation, d’effort, de persévérance et de clairvoyance. Elle détermine l’intensité de l’engagement, la capacité à passer à l’action, à tenir dans la durée et à rester orienté vers l’objectif malgré les difficultés."
             },
             "emotion": {
                 "title": "Émotion",
-                "desc": "Traitement de l'information émotionnelle, stress et autorégulation."
+                "desc": "Traitement de l’information émotionnelle, stress et autorégulation. Elle influence la qualité du discernement, la relation aux autres et la faculté à conserver lucidité et stabilité dans les situations de pression."
             },
             "sensorimotor": {
-                "title": "Sensorimotion",
-                "desc": "Perception sensorielle fine, coordination et précision gestuelle."
+                "title": "Sensori-motion",
+                "desc": "Perception sensorielle fine, coordination et précision gestuelle. Elle traduit l’intention en exécution concrète grâce à l’ajustement du geste, au rapport à l’espace et à la maîtrise des outils et interfaces."
             }
         },
         "analogy": {

@@ -40,16 +40,17 @@ export const Contact: React.FC = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', organization: '', role: '', subject: '', message: '' });
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error sending form:', error);
       setSubmitStatus('error');
-      setErrorMessage(t('contact.error.generic'));
+      // Show more specific error if available
+      setErrorMessage(`${t('contact.error.generic')} (${error.message})`);
     } finally {
       setIsSubmitting(false);
     }
