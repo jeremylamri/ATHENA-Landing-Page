@@ -24,12 +24,9 @@ export const Footer: React.FC<FooterProps> = ({ onLegalClick }) => {
             </>
           )}
         </div>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-right">
-          <a href="https://www.tomorrowtheory.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">
-            {t('footer.studio')}
-          </a>
-          <a href="mailto:general@tomorrowtheory.com" className="text-white/50 hover:text-white transition-colors">
-            {t('footer.contact')}
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+          <a href="https://www.tomorrowtheory.com" target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity">
+            <img src="/logo-footer.png" alt="Tomorrow Theory" className="h-8 w-auto" />
           </a>
         </div>
       </div>

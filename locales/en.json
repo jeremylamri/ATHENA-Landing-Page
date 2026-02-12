@@ -34,34 +34,34 @@
     },
     "model": {
         "badge": "The Model",
-        "title": "Systemic Modeling.",
-        "desc_1": "ATHENA does not just automate tasks. It structures pedagogical thinking according to a proven proprietary model.",
-        "desc_2": "Each decision is weighed, argued, and traceable.",
+        "title": "A systemic modeling of competence.",
+        "desc_1": "Competence is not a stable stock of knowledge. It is a dynamic of mobilization, coordination, and regulation of internal resources in the face of a given situation.",
+        "desc_2": "Operationalization via 60 facets and 4 mastery levels allows moving from a generalist training intention to a precision engineering strategy.",
         "dimensions": {
             "cognition": {
                 "title": "Cognition",
-                "desc": "Mental processes and cognitive load."
+                "desc": "Analysis, reasoning, decision-making, and anticipation capabilities. It enables understanding complex situations, prioritizing useful information, building action strategies, and adjusting choices when the environment evolves."
             },
             "knowledge": {
                 "title": "Knowledge",
-                "desc": "Nature and structure of knowledge."
+                "desc": "Mobilizable declarative, procedural, and contextual knowledge. They group concepts, methods, rules, and benchmarks from experience that secure action and allow intervening relevantly in varied contexts."
             },
             "conation": {
                 "title": "Conation",
-                "desc": "Learner motivation and volition."
+                "desc": "Factors of motivation, effort, perseverance, and foresight. It determines the intensity of engagement, the capacity to take action, to endure over time, and to stay oriented towards the objective despite difficulties."
             },
             "emotion": {
                 "title": "Emotion",
-                "desc": "Affective factors and feelings."
+                "desc": "Processing of emotional information, stress, and self-regulation. It influences the quality of discernment, relationships with others, and the faculty to maintain lucidity and stability in pressure situations."
             },
             "sensorimotor": {
-                "title": "Sensorimotor",
-                "desc": "Physical and perceptual skills."
+                "title": "Sensori-motion",
+                "desc": "Fine sensory perception, coordination, and gestural precision. It translates intention into concrete execution through gesture adjustment, spatial relationship, and mastery of tools and interfaces."
             }
         },
         "analogy": {
             "title": "The Chemistry of Competence",
-            "text": "Just as chemistry decomposes matter into atoms, ATHENA decomposes competence into its fundamental elements to better reconstruct it."
+            "text": "A business competence (e.g., \"Leadership\") is not a monolithic block. It is a complex assembly, comparable to a molecule.\n\nATHENA acts like the Periodic Table of HR: we have isolated the 60 fundamental atoms (the facets) that compose all human intelligence.\n\nInstead of managing vague \"labels\", you now manipulate the exact chemical formula of your jobs. You no longer guess: you recompose performance atom by atom."
         }
     },
     "nav": {
