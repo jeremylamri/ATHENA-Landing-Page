@@ -54,11 +54,11 @@ export const SocialProof: React.FC = () => {
         {/* Logos Section - Changed to Grid for full width distribution */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16">
           {partners.map((partner, i) => (
-            <div key={i} className="group relative w-full h-24 md:h-32 flex items-center justify-center p-6 bg-white/[0.03] border border-white/5 rounded-xl transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] print:bg-white print:border-slate-200">
+            <div key={i} className="group relative w-full h-32 md:h-40 flex items-center justify-center p-8 bg-white/[0.03] border border-white/5 rounded-xl transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] print:bg-white print:border-slate-200">
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-full object-contain transition-all duration-500 filter brightness-0 invert opacity-60 group-hover:filter-none group-hover:opacity-100 print:filter-none print:opacity-100"
+                className="w-full h-full object-contain transition-all duration-500 opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 print:filter-none print:opacity-100"
               />
             </div>
           ))}
