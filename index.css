@@ -120,4 +120,9 @@
     ::-webkit-scrollbar {
         display: none;
     }
+
+    /* Utility to hide elements in print */
+    .no-print {
+        display: none !important;
+    }
 }
