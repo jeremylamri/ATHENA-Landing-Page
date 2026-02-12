@@ -28,9 +28,9 @@ export const SocialProof: React.FC = () => {
   ];
 
   const partners = [
-    { name: "Bouygues", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Bouygues_logo.svg/1200px-Bouygues_logo.svg.png" },
-    { name: "Decathlon", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Decathlon_Logo_2024.svg/1200px-Decathlon_Logo_2024.svg.png" },
-    { name: "Crédit Mutuel Alliance Fédérale", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/2/22/Cr%C3%A9dit_Mutuel_Alliance_F%C3%A9d%C3%A9rale.svg/1200px-Cr%C3%A9dit_Mutuel_Alliance_F%C3%A9d%C3%A9rale.svg.png" }
+    { name: "Bouygues", logo: "/partners/bouygues.svg" },
+    { name: "Decathlon", logo: "/partners/decathlon.svg" },
+    { name: "Crédit Mutuel Alliance Fédérale", logo: "/partners/credit-mutuel.png" }
   ];
 
   return (
