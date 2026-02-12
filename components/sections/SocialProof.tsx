@@ -34,19 +34,19 @@ export const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section id="preuves" className="py-16 md:py-24 border-y border-white/5 bg-[#050505] scroll-mt-24 md:scroll-mt-32">
+    <section id="preuves" className="py-16 md:py-24 border-y border-white/5 bg-[#050505] scroll-mt-24 md:scroll-mt-32 print:bg-white print:text-black print:border-none">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="mb-12 md:mb-16">
-          <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3">
+          <span className="text-accent font-medium tracking-widest text-xs uppercase block mb-3 print:text-accent-700">
             {t('social_proof.badge')}
           </span>
-          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-white leading-tight print:text-black">
             {t('social_proof.title')}
           </h2>
-          <p className="text-white/60 text-base md:text-lg mb-6">
+          <p className="text-white/60 text-base md:text-lg mb-6 print:text-slate-700">
             <Trans i18nKey="social_proof.desc_1" />
           </p>
-          <p className="text-white/60 text-base md:text-lg">
+          <p className="text-white/60 text-base md:text-lg print:text-slate-700">
             <Trans i18nKey="social_proof.desc_2" />
           </p>
         </div>
@@ -54,32 +54,32 @@ export const SocialProof: React.FC = () => {
         {/* Logos Section - Changed to Grid for full width distribution */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-16">
           {partners.map((partner, i) => (
-            <div key={i} className="group relative w-full h-24 md:h-32 flex items-center justify-center p-6 bg-white/[0.03] border border-white/5 rounded-xl transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02]">
+            <div key={i} className="group relative w-full h-24 md:h-32 flex items-center justify-center p-6 bg-white/[0.03] border border-white/5 rounded-xl transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] print:bg-white print:border-slate-200">
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-full object-contain transition-all duration-500 filter brightness-0 invert opacity-60 group-hover:filter-none group-hover:opacity-100"
+                className="max-w-full max-h-full object-contain transition-all duration-500 filter brightness-0 invert opacity-60 group-hover:filter-none group-hover:opacity-100 print:filter-none print:opacity-100"
               />
             </div>
           ))}
         </div>
 
-        <p className="text-white/60 text-base md:text-lg mb-10">
+        <p className="text-white/60 text-base md:text-lg mb-10 print:text-slate-700">
           {t('social_proof.recognition')}
         </p>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-6xl">
           {publications.map((pub, i) => (
-            <GlassCard key={i} className="group cursor-pointer flex flex-col justify-between h-full" hoverEffect onClick={() => window.open(pub.link, '_blank')}>
+            <GlassCard key={i} className="group cursor-pointer flex flex-col justify-between h-full print:bg-slate-50 print:border-slate-200 print:shadow-none" hoverEffect onClick={() => window.open(pub.link, '_blank')}>
               <div>
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-[10px] md:text-xs font-mono px-2 py-1 rounded text-green-400 bg-green-400/10 border border-green-400/20">{pub.status}</span>
-                  <ArrowUpRight className="text-white/30 group-hover:text-white transition-colors" size={20} />
+                  <span className="text-[10px] md:text-xs font-mono px-2 py-1 rounded text-green-400 bg-green-400/10 border border-green-400/20 print:text-green-700 print:bg-green-100 print:border-green-300">{pub.status}</span>
+                  <ArrowUpRight className="text-white/30 group-hover:text-white transition-colors print:text-slate-500 print:group-hover:text-black" size={20} />
                 </div>
-                <h3 className="text-xs md:text-sm font-bold text-accent mb-2 uppercase tracking-wider">{pub.journal}</h3>
-                <p className="text-sm md:text-base text-white font-medium leading-snug">{pub.title}</p>
+                <h3 className="text-xs md:text-sm font-bold text-accent mb-2 uppercase tracking-wider print:text-accent-700">{pub.journal}</h3>
+                <p className="text-sm md:text-base text-white font-medium leading-snug print:text-black">{pub.title}</p>
               </div>
-              <div className="mt-6 pt-6 border-t border-white/5 text-[10px] md:text-xs text-white/30 uppercase tracking-widest group-hover:text-white transition-colors">
+              <div className="mt-6 pt-6 border-t border-white/5 text-[10px] md:text-xs text-white/30 uppercase tracking-widest group-hover:text-white transition-colors print:text-slate-500 print:border-slate-200 print:group-hover:text-black">
                 {t('social_proof.publications.read_article')}
               </div>
             </GlassCard>

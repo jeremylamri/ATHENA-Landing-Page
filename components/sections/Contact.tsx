@@ -31,11 +31,18 @@ export const Contact: React.FC = () => {
     setErrorMessage('');
 
     try {
-      // Simulate API call or real email sending logic here
-      // await emailjs.send(...)
+      const response = await fetch('/api/slack', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // For now, simulate success after a delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', organization: '', role: '', subject: '', message: '' });
 
